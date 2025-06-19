@@ -1,6 +1,6 @@
 # FlexiGrader
 
-*Your project description…*
+*Project description*
 
 An LLM-Based Personalized Autograder. 
 

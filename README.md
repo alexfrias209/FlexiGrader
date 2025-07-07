@@ -24,5 +24,5 @@ This project includes code from:
 
 ## 📄 License
 
-- **FlexiGrader**: [MIT License](./LICENSE) *(or replace with your actual license)*
+- **FlexiGrader**: [Apache License 2.0 License](./LICENSE) 
 - **Axolotl code in `axolotl/`**: Apache 2.0 (see `axolotl/LICENSE`)

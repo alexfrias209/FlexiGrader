@@ -17,8 +17,7 @@ This project uses a fine-tuned version of Code LLaMA 34B, available here:
 
 This project includes code from:
 
-- **[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** – Apache 2.0 license  
-  → See `axolotl/LICENSE` for their full license terms.
+- **[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** – Apache 2.0 license
 
 ---
 

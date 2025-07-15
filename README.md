@@ -21,6 +21,29 @@ This project includes code from:
 
 ---
 
+## 📁 Folder Structure
+
+The project expects student submissions to be structured like this:
+
+<pre>
+MainFolderContainingAllStudents/
+├── StudentIDFolder1/
+│   ├── StudentCodePythonScripts1.py
+│   ├── ...
+│   └── StudentCodePythonScriptsN.py
+├── StudentIDFolder2/
+│   ├── StudentCodePythonScripts1.py
+│   ├── ...
+│   └── StudentCodePythonScriptsN.py
+├── ...
+└── StudentIDFolderN/
+    ├── StudentCodePythonScripts1.py
+    ├── ...
+    └── StudentCodePythonScriptsN.py
+</pre>
+
+---
+
 ## 📄 License
 
 - **FlexiGrader**: [Apache License 2.0 License](./LICENSE) 

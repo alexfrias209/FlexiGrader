@@ -4,7 +4,7 @@ import csv
 from peft import PeftModel, PeftConfig
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-csv_filename = 'name.csv'
+csv_filename = 'FinalTestFeed4096AllCriteriaResponse.csv'
 
 output_filename = 'codellama-34b-Python-Test.csv'
 progress_filename = 'codellama-34b-Python-Test.txt'

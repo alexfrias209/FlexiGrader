@@ -1,0 +1,3675 @@
+instruction
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Recommendation apps: This is a list of many different kinds of projects that would involve recommending something to the user. Each of the recommendation app must have a set number of times the user must train the app by answering a list of questions. Then, based on those answers, the program should start recommending to the user from a menu of options. For example, a movie recommendation app would ask some questions like Do you like horror movies? and so on, then store the answers in a file for the user. After this training, the user may choose from some options of what recommendation they would like (a short movie, a TV show, an award-winning movie etc.. you can decide the menu that you offer to the user), then, depending on what the user chooses from your menu, you recommend a name of a movie. In the same way, you can also build a recommendation app for other things. To make it more realistic, you may get data from online sources for any of your recommendation apps.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+while True:
+    import csv
+
+    print('\033[1m' + ""\nWelcome to recommendation for Appliance/Smart Device"" + '\033[0m') # '\033[1m' and '\033[0m' makes the print statement bold
+    print('\033[1m' + 'Search features for best recommendation' + '\033[0m')
+    print()
+    # separates the appliances, brand, year price, and model
+    def recommendation(lines, recommendations_found):   
+        lines[0].strip().lower()
+        brand = lines[1].strip().lower()
+        year = int(lines[2].strip())
+        price = float(lines[3].strip())
+        model = lines[4].strip()
+    # -if statement to print if the input is 'none' or a brand or integer
+        if (
+            (user_brand == 'none' or user_brand == brand) and
+            (user_year == 'none' or user_year <= year) and
+            (user_price == 'none' or user_price >= price)
+        ):
+            print(f""You might consider this model: {brand} - model {model}: priced at ${price:.2f} made in {year}"")
+            recommendations_found[0] = True
+    # list of the items in the file
+    available_appliances = ['refrigerator', 'phone', 'machine washer', 'stove']
+    print('\033[1m' + ""Press:"" + '\033[0m'
+        ""\n1 for Refrigerator,"" 
+        ""\n2 for Phone,"" 
+        ""\n3 for Machine Washer,""
+        ""\n4 for Stove"")
+    # loop that will continue for ever until an input based on the if-else statement is true
+    while True:
+        user_appliance_choice = input(""Enter your choice: "")
+        if user_appliance_choice.isnumeric() and 1 <= int(user_appliance_choice) <= 4:
+            user_appliance = available_appliances[int(user_appliance_choice) - 1]
+            break
+        else:
+            print(""\nInvalid choice. Please enter 1, 2, 3, or 4."")
+
+    user_brand = input(""\nRefrigerator (LG, Samsung, GE)""
+                       ""\nPhone (Samsung, Apple, Nokia)""
+                       ""\nMachine Washer (Samsung, LG, Whirlpool)""
+                       ""\nStove (Whirlpool, Bosch, GE, LG)""
+                       ""\n('none' if no preference): ""
+                       '\033[1m' + ""\nEnter brand: "" + '\033[0m').lower()
+
+    # loop that will continue for ever until an input based on the if-else statement is true
+    while True:
+        user_year = input('\033[1m' + ""\nEnter preferred and above year (or 'none' if no preference): "" + '\033[0m').lower()
+        if (user_year.isnumeric() and len(user_year) == 4) and int(user_year) <= 2023 or user_year == 'none':
+            user_year = int(user_year) if user_year.isnumeric() else 'none'
+            break
+        else:
+            print(""\nInvalid input. Please enter a valid 4-digit year or 'none'."")
+    # loop that will continue for ever until an input based on the if-else statement is true
+    while True:
+        user_price = input('\033[1m' + ""\nWhat is your maximum price (or 'none' if no preference): "" + '\033[0m').lower()
+        if user_price.replace('.', '', 1).isnumeric() or user_price == 'none': #checks if it's a number
+            user_price = float(user_price) if user_price.replace('.', '', 1).isnumeric() else 'none' #If it is a number then convert it to float
+            break
+        else:
+            print('\033[1m' + ""\nInvalid input. Please enter a valid price or 'none'."" + '\033[0m')
+
+    filename = '67614_6389687_8182736.csv'
+    recommendations_found = [False]
+    # introduces the file
+    with open(filename, mode='r', newline='', encoding='utf-8') as file:
+        csvFile = csv.reader(file)
+        next(csvFile)  
+        for lines in csvFile:      # if-statement for the user_appliances in the file 
+            if lines[0].strip().lower() == user_appliance:
+                recommendation(lines, recommendations_found)
+    # if false, which means it didn't go through then prints 
+    if not recommendations_found[0]:
+        print(""Sorry, no matches were found with your criteria."")
+    continue_code = input('\033[1m' + '\nDo you want to continue (yes/no)? ' + '\033[0m')
+    if continue_code == 'yes':
+        continue
+    elif continue_code == 'no':
+        break
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Recommendation apps: This is a list of many different kinds of projects that would involve recommending something to the user. Each of the recommendation app must have a set number of times the user must train the app by answering a list of questions. Then, based on those answers, the program should start recommending to the user from a menu of options. For example, a movie recommendation app would ask some questions like Do you like horror movies? and so on, then store the answers in a file for the user. After this training, the user may choose from some options of what recommendation they would like (a short movie, a TV show, an award-winning movie etc.. you can decide the menu that you offer to the user), then, depending on what the user chooses from your menu, you recommend a name of a movie. In the same way, you can also build a recommendation app for other things. To make it more realistic, you may get data from online sources for any of your recommendation apps.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+import csv
+
+def get_price_range():
+    print(""\nPlease choose one of the following options:"")
+    options = [""$500-$1000"", ""$1000-$1500"", ""$1500-$2000"", ""more than $2000""]
+    for idx, option in enumerate(options, 1):
+        print(f""{idx}. {option}"")
+
+    choice = input(""Enter your choice (1-4): "")
+    if 1 <= int(choice) <= 4:
+        return options[int(choice) - 1]
+    else:
+        print(""Invalid choice."")
+        quit()
+
+def get_weather_preference():
+    print(""\nDo you want to go to a place that is:"")
+    options = [""cold"", ""hot"", ""rainy""]
+    # for idx, option in enumerate(options, 1):
+    #     print(f""{chr(96 + idx)}. {option}"")
+    for idx, option in enumerate(options, 1):
+      print(f""{idx}. {option}"")
+  
+    choice = input(""Enter your choice (1-3): "")
+    if 1 <= int(choice) <= 3:
+      return options[int(choice) - 1]
+    else:
+      print(""Invalid choice."")
+      quit()
+    # choice = input(""Enter your choice (a-c): "")
+    # if choice in ['a', 'b', 'c']:
+    #     return options[ord(choice) - 97]
+    # else:
+    #     print(""Invalid choice."")
+    #     quit()
+
+def get_time_period():
+    print(""\nHow long would you like to stay:"")
+    options = [""one week"", ""one month"", ""more than one month""]
+    for idx, option in enumerate(options, 1):
+      print(f""{idx}. {option}"")
+  
+    choice = input(""Enter your choice (1-3): "")
+    if 1 <= int(choice) <= 3:
+      return options[int(choice) - 1]
+    else:
+      print(""Invalid choice."")
+      quit()
+
+def get_people_count():
+    print(""\nHow many people will be going:"")
+    options = [""one"", ""2"", ""3"", ""4 or more""]
+    for idx, option in enumerate(options, 1):
+        print(f""{idx}. {option}"")
+
+    choice = input(""Enter your choice (1-4): "")
+    if 1 <= int(choice) <= 4:
+        return options[int(choice) - 1]
+    else:
+        print(""Invalid choice."")
+        quit()
+
+def recommendation(price_range, weather, time, people):
+    with open('67875_6408048_7616452.csv', mode='r') as file:
+        csv_reader = csv.reader(file)
+        next(csv_reader)
+        for line in csv_reader:
+            if all([
+                price_range == line[2].strip(),
+                weather == line[3].strip(),
+                time == line[4].strip(),
+                people == line[5].strip()
+            ]):
+                print(f""You should vacation at {line[0]}, {line[1]}"")
+
+print(""Welcome to the Vacation Selector \nChoose what best relates to you and relax"")
+price_range = get_price_range()
+weather = get_weather_preference()
+time = get_time_period()
+people = get_people_count()
+recommendation(price_range, weather, time, people)
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+The goal is to simulate stress-strain curves for different materials. You would implement Hooke's Law and other stress-strain relationships in Python for conditions like tensile, compressive, and shear stresses. You could explore how different materials react to stress, and you could extend this by introducing fatigue analysis. Outputs could include plotted stress-strain curves and a report generated in a text file. (Use Matplotlib for visual)
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+import matplotlib.pyplot as plt
+#List     =[[""Material"", spring constant, original Length(feet), Second Length(feet), area(inches) ],[etc...]]
+materials = [['GOLD',float(0.92),int(5), int(10),int(15)],[""ALUMINUM"", float(0.81),int(5), int(10),int(15)],[""TITANIUM"", float(1.45),int(5), int(10),int(15)],[""PLATINUM"", float(2.06), int(5), int(10), int(15)]]
+ans = True
+while ans:
+    print (""""""""
+    1. Select Your own values for stress analysis on materials.
+    2. Analyze stress on materials from a list
+    3. EXIT SAM 
+    """""")
+    ans=input(""Welcome to Stress Analysis on Materials (SAM). What would you like to alanyze?"")
+    if ans==""1"":
+      user_mat = input(""What material will be tested?"")
+      k = float(input('Enter a value for the Spring Constant of the material: '))
+      length_1 = float(input('Enter a value for the original length of the material: '))
+      length_2 = float(input('Enter a value for the second length of the material: '))
+      area = float(input('Enter a value for the area of the material: '))
+      X = length_1 - length_2
+      F = -1 * k * X  # measured in newtons
+      Hookes_law = F
+      tensile_stress = F / area
+      tensile_strain = X / length_1  # stretch
+      compressive_stress = F / area
+      compressive_strain = -1 * X / length_1
+      shear_stress = F / area
+      shear_strain = X / length_1
+      G = shear_stress / shear_strain  # G modulus
+      Young_modulus = compressive_stress / compressive_strain
+      txt_output = print(f""""""
+      The Force value of {user_mat} is {Hookes_law}.
+      The tensile strain of {user_mat} is {tensile_strain}.
+      The shear strain of {user_mat} is {shear_strain}.
+      The shear modulus of {user_mat} is {G}.
+      """""")
+      x = range(-10, 20)
+      force_values = [-k * val for val in x]
+      plt.plot(x, force_values, label = ""Hookes Law"", linestyle = '--', color = 'blue')
+      plt.xlabel('Change in length(x)')
+      plt.ylabel('Force (F)')
+      plt.title('Hookes law')
+      plt.legend()
+      plt.grid(True)
+      plt.show()
+      f = open('67910_6410023_4747754.txt', 'w')
+      f.write(f""""""
+              The Force value of {user_mat} is {Hookes_law}.
+              The tensile strain of {user_mat} is {tensile_strain}.
+              print(f'The shear strain of {user_mat} is {shear_strain}.
+              print(f'the shear modulus of {user_mat} is {G}.
+              """""")
+      f.close()
+      f = open(""67910_6410023_4747754.txt"", ""r"")
+      print(f.read())
+      print('The file has been updated. Thank you for choosing SAM')
+    elif ans == ""2"":
+      print(""""""
+                   Material | Spring Constant
+                       GOLD : 0.92
+                   ALUMINUM : 0.81
+                   TITANIUM : 1.45
+                   PLATINUM : 2.06
+        All values listed have unique spring constants.
+        ALl values listed have an original length of 5 feet
+        All values listed have a difference of 5 feet of length
+        ALl values listed have an area of 15 inches squared
+        
+        """""")
+      user_option = input('Please choose one material as listed above(CASE SENSITIVE): ')
+      chosen_mat = None
+      for material in materials:
+        if material[0] == user_option:
+          chosen_mat = material
+          break
+      if chosen_mat:
+        user_mat, k, length_1, length_2, area = chosen_mat
+        X = length_1 - length_2
+        F = -1 * k * X  # measured in newtons
+        Hookes_law = F
+        tensile_stress = F / area
+        tensile_strain = X / length_1  # stretch
+        compressive_stress = F / area
+        compressive_strain = -1 * X / length_1
+        shear_stress = F / area
+        shear_strain = X / length_1
+        G = shear_stress / shear_strain  # G modulus
+        Young_modulus = compressive_stress / compressive_strain
+        print(f""""""
+        The Force value of {user_mat} is {Hookes_law}.
+        The tensile strain of {user_mat} is {tensile_strain}.
+        print(f'The shear strain of {user_mat} is {shear_strain}.
+        print(f'the shear modulus of {user_mat} is {G}.
+        """""")
+        x = range(-10, 20)
+        force_values = [-k * val for val in x]
+        plt.plot(x, force_values, label=""Hookes Law"", linestyle='--', color='blue')
+        plt.xlabel('Change in length(x)')
+        plt.ylabel('Force (F)')
+        plt.title('Hookes law')
+        plt.legend()
+        plt.grid(True)
+        plt.show()
+        f = open('67910_6410024_3666964.txt', 'w')
+        f.write(f""""""
+        The Force value of {user_mat} is {Hookes_law}.
+        The tensile strain of {user_mat} is {tensile_strain}.
+        print(f'The shear strain of {user_mat} is {shear_strain}.
+        print(f'the shear modulus of {user_mat} is {G}.
+        """""")
+        f.close()
+        f = open(""67910_6410024_3666964.txt"", ""r"")
+        print(f.read())
+        print('The file has been updated. Thank you for choosing SAM')
+      else:
+        print(f'{user_option} is not a valid choice. Please check for spelling mistakes or refer to the list above.')
+    elif ans==""3"":
+      print(""\n Thank you for choosing Project SAM."")
+      break
+    elif ans !="""":
+      print(f""\n {ans} is not a valid choice. Please enter a value from above."")
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+The project consists of asking the user for their type of engine and the liters of the engine.Will also have the option of letting users just input the name of the car as well. The user will then provide the number of miles that their trip is going to require and will output the amount of gas needed for that trip.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+print('Welcome to ""Gas Amount"" \n')
+
+print('These program would give the user the amount of gasoline based on:\n 1)The users car\n 2)The amount of miles required to get to the desired destination\n')
+
+while True:
+    amiles =input('what is the amount of miles required to get to your destination?\n:')
+
+    try:
+        amiles = int(amiles)
+        break
+
+    except ValueError:
+        print('invalid answer\n try again')
+
+
+
+
+ 
+if amiles >= 1 :
+    didanswer=True
+    print('Please enter the car with the type of transmicion, engine size, and the cylinders.\n or \nJust the car and transmicion.')   
+    cars= input('\nWhat type of car you have? \n \n-----examples-----\n LAMBORGHINI Aventador Coupe AM-S7 6.5L 12cyl \n or \n LAMBORGHINI Aventador Coupe AM-S7 \n \n PORSCHE 911 GT3 AM-S7 3.8L 6cyl \n or \n PORSCHE 911 GT3 AM-S7 \n------------------- \n:')
+
+    if amiles and cars:
+        with open(""68079_6420780_2054302.txt"", ""r"", encoding=""cp1252"") as file:
+            foundcar= False
+            
+    
+            for line in file:
+                parts= line.strip().split(',')
+
+                carname=parts[0]               
+                mpg= parts[1]
+
+                if carname.lower()== cars.lower():
+                    foundcar= True
+                    print(f'you have selected the car {carname}.\n')
+            
+                    print(f'the gas needed for {carname} to travel {amiles} miles is {amiles/int(mpg)} gallons \n')
+                
+        
+            if not foundcar:
+                    print(""Car not found!"")
+    else:
+        print('you did not answer all the questions, sorry :( ')
+else:
+    print('no reasonable number of miles :( \n')
+
+
+print('have a good day :)')
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+calculator that includes basic plus, mines, multiplicationalso built in the calculator will be sin cos tan to calculate degree and allow the python file to import the calculation record to the txt file.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+import math
+history = []
+last_result = None
+def get_number(prompt):
+    if last_result is None:
+        return float(input(prompt))
+    else:
+        choice = input('1. Use the last result as the first number (L)\n2. Enter a new number (N)\nEnter your choice (L/N): ')
+        if choice in ['L', 'l']:
+            return last_result
+        elif choice in ['N', 'n']:
+            return float(input(prompt))
+        else:
+            print('Invalid choice, so using the previous result.')
+            return last_result
+            
+def add():
+    num1 = get_number('Enter the first number: ')
+    num2 = float(input('Enter the second number: '))
+    result = num1 + num2
+    history.append(result)
+    return result
+def subtract():
+    num1 = get_number('Enter the first number: ')
+    num2 = float(input('Enter the second number: '))
+    result = num1 - num2
+    history.append(result)
+    return result
+def multiply():
+    num1 = get_number('Enter the first number: ')
+    num2 = float(input('Enter the second number: '))
+    result = num1 * num2
+    history.append(result)
+    return result
+def divide():
+    num1 = get_number('Enter the numerator: ')
+    num2 = float(input('Enter the denominator: '))
+    if num2 == 0:
+        print('Error, denominator cannot be zero!!!')
+        return None
+    result = num1 / num2
+    history.append(result)
+    return result
+def square_root():
+    num = get_number('Enter the number: ')
+    if num < 0:
+        print('Error,cannot calculate square root with a negative number!!!')
+        return None
+    result = math.sqrt(num)
+    history.append(result)
+    return result
+def sin():
+    angle = get_number('Enter the angle in degrees: ')
+    result = math.sin(math.radians(angle))
+    history.append(result)
+    return result
+def cos():
+    angle = get_number('Enter the angle in degrees: ')
+    result = math.cos(math.radians(angle))
+    history.append(result)
+    return result
+def tan():
+    angle = get_number('Enter the angle in degrees: ')
+    result = math.tan(math.radians(angle))
+    history.append(result)
+    return result
+def view_history():
+    print('The most recent three calculation results:')
+    for idx, item in enumerate(history[-3:], start=1):
+        print(f'{idx}. {item}')
+def save_history():
+    filename = input('Enter the filename to save the results,you can include the file format: ')
+    with open(filename, 'w') as file:
+        for item in history:
+            file.write(str(item) + '\n')
+    print(f'Results are saved to {filename}')
+    
+operations = {
+    '1': add,
+    '2': subtract,
+    '3': multiply,
+    '4': divide,
+    '5': square_root,
+    '6': sin,
+    '7': cos,
+    '8': tan,
+    '9': view_history,
+    '10': save_history
+}
+
+while True:
+    print('Choose your calculating method:')
+    for key, value in operations.items():
+        print(f'{key}. {value.__name__}')
+    print('11. exit')
+    choice = input('Enter your option (1/2/3/4/5/6/7/8/9/10/11): ')
+    if choice == '11':
+        break
+    elif choice in operations:
+        operation = operations[choice]
+        result = operation()
+        if result is not None:
+            last_result = result
+            print('Result: ', result)
+    else:
+        print('Invalid, please re-enter!!')
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Build a program to encrypt and decrypt text using simple encryption algorithms like Caesar or Vigenre ciphers. You could explore the strengths and weaknesses of different encryption methods. Outputs would include the encrypted and decrypted messages.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+#ME 021 Python Project
+print('          Welcome to my Simple Encryption Algorithm')
+print()
+print('The objective of this program is to encrypt and decrypt text using simple encryption algorithms like Caesar or Vigenre ciphers')
+print()
+print()
+print('To quit the program write ""q"" or ""quit""')
+print()
+
+number= 0
+while number >= 0:
+    number= input('\nPlease enter the shift number (The number must be between 1 and 25): ')
+    if (number == 'q') or (number== 'quit'):   #Check if the user wants to quit the program
+        break                                  #Break the program by skiping the rest of the code inside the while loop
+    number= int(number)                        #Converts the user string input to an integer used as shift number
+    while (25 < number) or (number < 1):       #Check if the user number input is between the range, it is a loop until the given value is valid (between the range)
+        print('\nThe given number is not valid, please enter a valid number.')  #If the value is not between the range then it prints and statement asking for a valid number
+        number=input('\nPlease enter the shift number (The number must be between 1 and 25):') #Gives the user opportunity to enter a new number between the range
+        number= int(number)                    #Converts the given string into a integer
+
+    func= input('\nDo you want to encrypt or dencrypt? (enc or den) ')         #Ask user if wants to encrypt or dencrypt. It is used to determine which function will be used.
+    while (func != 'enc') and (func != 'den'):                               #Checks if the user given input is valid, it is a loop until the given input is valid (enc or den)
+        print('\nThe given option is not valid, please enter a valid option.')  #Let the user know that the given input value is not valid and ask for a valid input
+        func= input('\nDo you want to encrypt or dencrypt? (enc or den) ')     #Gives the user opportunity to enter a new valid input
+    
+    original= input('\nEnter the text you want to encrypt or dencrypt: ')       #Ask the user for the text to encrypt or dencrypt
+    option= input('\nWant to see the original text after encrypt or dencrypt? (yes or no) ') #Ask the user if wants to see the original text input
+
+    firstLetter= ord('A')   #Is the number for the first alphabet capital letter in ASCII
+    lastLetter= ord('Z')    #Is the number for the last alphabet capital letter in the ASCII
+    letterRange= 26         #Number of letters in alphabet
+
+
+    def encrypt_message(original, number):   #Function for encrypt
+        encrypt= ''                          #Placeholder for message
+        if 0 < number < 26: 
+            for letter in original.upper():  #Reading letter by letter the text given by the user
+                if letter.isalpha():         #Only change the code number of letters, no special characters
+                    letter_num= ord(letter)      #Analize the code number of each letter using ASCII code
+                    new_num= letter_num + number #Creates the new code number for each letter adding the given shift number
+
+                    if new_num >lastLetter:     #If the new code number is out of the letters section then it start again giving us a code number inside the alphabet
+                        new_num -=letterRange   
+
+                    if new_num < firstLetter:
+                        new_num += letterRange
+
+                    new_letter= chr(new_num)     #Convert from code number to letter 
+                    encrypt+= new_letter         #Stores the new letters in the encrypt placeholder
+
+                else:
+                    encrypt+= letter             #Add especial characters to the encrypt message as spaces and symbols
+        return encrypt
+
+    def decrypt_message(original, number):   #Function for decrypt 
+        decrypt= ''                          #Placeholder for message
+        if 0 < number < 26:
+            for letter in original.upper():  #Reading letter by letter the text given by the user
+                if letter.isalpha():         #Only change the code number of letters, no special characters
+                    letter_num= ord(letter)      #Analize the code number of each letter using ASCII code
+                    new_num= letter_num - number #Creates the new code number for each letter substracting the given shift number
+
+                    if new_num > lastLetter:     #if the new number is out of the letters section then it start again giving us a code number inside the alphabet
+                        new_num -= letterRange   
+
+                    if new_num < firstLetter:
+                        new_num += letterRange
+
+                    
+                    new_letter= chr(new_num)     #Convert from code number to letter 
+                    decrypt+= new_letter         #Stores the new letters in the dencrypt placeholder
+                else:
+                    decrypt+= letter             #Add the special characters to the decrypt place holder
+        return decrypt
+
+    if func == 'enc' or func == 'encrypt':      #If statement to use and print the encrypt function
+        print('\nEncryption number:', number)   #Print the shift number
+        enc = encrypt_message(original, number) #Call the encrypt function
+        print('Encrypted message:', enc)        #Print the encrypt message
+
+    elif func == 'den' or func == 'decrypt':    #If statement to use and print the decrypt function
+        print('\nDecryption number:', number)   #Print the shift number
+        dec = decrypt_message(original, number) #Call the decrypt function
+        print('Decrypted message:', dec)        #Print the decrypt message
+
+    if option == 'yes' or option =='y':         #Check if user wants to see original message
+        print('Original message:', original)    #If true prints original message
+
+print('\nThank you for trying my program!')       #Prints a sentence that thanks the user after enter q or quit value to end the loop
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Recommendation apps: This is a list of many different kinds of projects that would involve recommending something to the user. Each of the recommendation app must have a set number of times the user must train the app by answering a list of questions. Then, based on those answers, the program should start recommending to the user from a menu of options. For example, a movie recommendation app would ask some questions like Do you like horror movies? and so on, then store the answers in a file for the user. After this training, the user may choose from some options of what recommendation they would like (a short movie, a TV show, an award-winning movie etc.. you can decide the menu that you offer to the user), then, depending on what the user chooses from your menu, you recommend a name of a movie. In the same way, you can also build a recommendation app for other things. To make it more realistic, you may get data from online sources for any of your recommendation apps.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+print(""ME021_Python_Project_Moua_Karah"")
+
+print(""Welcome to the app Adventuring!"")
+print(""Start by choosing a place to do a fun activity!"")
+print()
+
+# This is the first step to finding an activity to do
+city = [""Merced"", ""Fresno"", ""San Francisco"", ""Monterey"", ""Los Angeles""]
+print(""Please choose a city:"")
+print('1.',city[0])
+print('2.',city[1])
+print('3.',city[2])
+print('4.',city[3])
+print('5.',city[4])
+print()
+
+choice = input(""Enter your choice (1/2/3/4/5):"")
+print()
+# if/else statements
+price = [""$10.00"", ""$20.00"", ""$30.00"", ""$40.00"", ""$50.00""]
+if choice == ""1"":
+    print(""Merced price range options:"")
+    print(""a."", price[0])
+    print(""b."", price[1])
+    print(""c."", price[2])
+    print(""d."", price[3])
+    print(""e."", price[4])
+elif choice == ""2"":
+    print(""Fresno price range options:"")
+    print(""a."", price[0])
+    print(""b."", price[1])
+    print(""c."", price[2])
+    print(""d."", price[3])
+    print(""e."", price[4])
+elif choice == ""3"":
+    print(""San Francisco price range options:"")
+    print(""a."", price[0])
+    print(""b."", price[1])
+    print(""c."", price[2])
+    print(""d."", price[3])
+    print(""e."", price[4])
+elif choice == ""4"":
+    print(""Monterey price range options:"")
+    print(""a."", price[0])
+    print(""b."", price[1])
+    print(""c."", price[2])
+    print(""d."", price[3])
+    print(""e."", price[4])
+else:
+    print(""Los Angeles price range options:"")
+    print(""a."", price[0])
+    print(""b."", price[1])
+    print(""c."", price[2])
+    print(""d."", price[3])
+    print(""e."", price[4])
+print()
+
+# This is the second step
+# Another if/else statement
+choose = input(""Choose your price range (a/b/c/d/e):"")
+if choose == ""a"":
+    print(""You chose to do a"", price[0], ""activity"")
+elif choose == ""b"":
+    print(""You chose to do a"", price[1], ""activity"")
+elif choose == ""c"":
+    print(""You chose to do a"", price[2], ""activity"")
+elif choose == ""d"":
+    print(""You chose to do a"", price[3], ""activity"")
+else:
+    print(""You chose to do a"", price[4], ""activity"")
+print()
+
+# Third step
+# Now performing a while loop
+while True:
+    print(""Select an indoor or outdoor activity:"")
+    print(""i. indoor activity"")
+    print(""o. outdoor activity"")
+    select = input()
+    if select == ""i"":
+        print(""You selected to do an indoor activity"")
+        print(""1. Movies"",
+              ""2. Escape room"",
+              ""3. Paint class"",
+              ""4. Dinner"",
+              ""5. Art Gallery"")
+        print()
+        decide = input(""Decide which activity (1/2/3/4/5):"")
+        if decide == ""1"":
+            print(""Movies"")
+        elif decide == ""2"":
+            print(""Escape room"")
+        elif decide == ""3"":
+            print(""Paint class"")
+        elif decide == ""4"":
+            print(""Dinner"")
+        else:
+            print(""Art Gallery"")
+        break
+    else:
+        print(""You selected to do an outdoor activity"")
+        print(""1. Picnic"",
+              ""2. Floating lantern festival"",
+              ""3. Stargazing"",
+              ""4. Hiking"",
+              ""5. Amusement Park"")
+        print()
+        decide = input(""Decide which activity (1/2/3/4/5):"")
+        if decide == ""1"":
+            print(""Picnic"")
+        elif decide == ""2"":
+            print(""Floating lanter festival"")
+        elif decide == ""3"":
+            print(""Stargazing"")
+        elif decide == ""4"":
+            print(""Hiking"")
+        else:
+            print(""Amusement Park"")
+        break
+print()
+
+print(""You've successfully chose an activity to do!"")
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Build a program that helps students find clubs and organizations that match their interests. Use dictionaries to store club information and functions to match student interests with clubs. Output would be a list of recommended clubs, saved to a text file for future reference.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+import matplotlib.pyplot as plt
+print(""Welcome to the UCM Club Finder Project. This project will help students find clubs and organizations that match their interests."")
+
+print(""Please choose one of the following traits/feelings that correlates to you:"")
+# Creating List for choices
+choices = [""Anger"",""Creative"",""Sadness"",""Talkative""]
+#list, all choices/subchoices
+sub_choices_1 = [""physical aggression"", ""frustration"", ""rage""]
+sub_choices_2 = [""Visual Artistry"",""Musical Creativity"",""Innovative""]
+sub_choices_3 = [""Loss and Greif"", ""Withdrawal"",""Loneliness""]
+sub_choices_4 = [""Public Speaking"", ""Persuasion"",""Narrative Skills""]
+emotion = """"
+sub_emotion = """"
+#defining variable as empty string
+
+def getsubchoices (s):
+  for i in range (len (s)):
+    print(i+1,s[i])
+  user_input_subchoice = input()
+  if int(user_input_subchoice)-1 > len(s) or int(user_input_subchoice)-1 < 0:
+    print(""Invalid choice. Please try again."")
+    exit()
+  return (int(user_input_subchoice)-1)
+#creating a function to get user sub choice index
+
+def getclub (choice, subchoice):
+  file1 = open(""68375_6420138_582823.txt"", ""r"")
+  lines = file1.readlines()
+  linesplit = lines[choice].split("","")
+  #split function splits by commas
+  return linesplit[subchoice]
+#creating a function to get club output from ClubNames.txt file
+
+def getresults (fileName):
+  emotion1 = {}
+  emotion2 = {}
+  clubName = {}
+  file1 = open(fileName, ""r"")
+  lines = file1.readlines()
+  for line in lines:
+#creating a function to print results from ClubNames.txt file
+    linesplit = line.split(""..."")
+    if(len(linesplit) != 3):
+      continue
+    linesplit[0] = linesplit[0].strip()
+    linesplit[1] = linesplit[1].strip()
+    linesplit[2] = linesplit[2].strip()
+    if linesplit[0] in emotion1:
+      emotion1[linesplit[0]] += 1
+    else:
+      emotion1[linesplit[0]] = 1
+    if linesplit[1] in emotion2:
+      emotion2[linesplit[1]] += 1
+    else:
+      emotion2[linesplit[1]] = 1
+    if linesplit[2] in clubName:
+      clubName[linesplit[2]] += 1
+    else:
+      clubName[linesplit[2]] = 1
+  return (emotion1, emotion2, clubName)
+  #split function splits by commas
+
+def createBarGraph(data): 
+  names = list(data.keys())
+  values = list(data.values())
+  plt.bar(range(len(data)), values, align='center', tick_label=names)
+  plt.xticks(rotation=45, ha=""right"")
+  plt.rcParams[""figure.figsize""] = (10, 5)
+  plt.show()
+
+
+for i in range (len (choices)):
+  print(i+1,choices[i])
+user_input_choice = input()
+#printing out the choices and getting user input
+#print(user_input_choice)
+match user_input_choice:
+#goes to one of the cases based on the number chosen for choices (similar to if statement)
+  case ""1"":
+    user_input_subchoice = getsubchoices (sub_choices_1)
+    #when line 31 executes goes to line 15
+    print(choices[int(user_input_choice)-1])
+    sub_emotion = sub_choices_1[int(user_input_subchoice)]
+    print(sub_emotion)
+    a = getclub (int(user_input_choice)-1, int(user_input_subchoice))
+    print(""The club that matches your traits is:"", a)
+    #Gives sub choices based on the choice the user picked, then prints out the club that matches the choice/subchoice
+  case ""2"":
+    user_input_subchoice = getsubchoices (sub_choices_2)
+    print(choices[int(user_input_choice)-1])
+    sub_emotion = sub_choices_2[int(user_input_subchoice)]
+    print(sub_emotion)
+    a = getclub (int(user_input_choice)-1, int(user_input_subchoice))
+    print(""The club that matches your traits is:"", a)
+  case ""3"":
+    user_input_subchoice = getsubchoices (sub_choices_3)
+    print(choices[int(user_input_choice)-1])
+    sub_emotion = sub_choices_3[int(user_input_subchoice)]
+    print(sub_emotion)
+    a = getclub (int(user_input_choice)-1, int(user_input_subchoice))
+    print(""The club that matches your traits is:"", a)
+  case ""4"":
+    user_input_subchoice = getsubchoices (sub_choices_4)
+    print(choices[int(user_input_choice)-1])
+    sub_emotion = sub_choices_4[int(user_input_subchoice)]
+    print(sub_emotion)
+    a = getclub (int(user_input_choice)-1, int(user_input_subchoice))
+    print(""The club that matches your traits is:"", a)
+  case _:
+    print(""Please enter a valid choice."")
+    exit()
+#prints out subchoices based on the choice chosen by user, if correct choice not chose, will go to line 110 (prints out ""Please enter a valid choice"")
+
+
+emotion = choices[int(user_input_choice)-1]
+f = open(""68375_6420138_582823.txt"", ""a"")
+f.write(f""{emotion}...{sub_emotion}...{a}\n"")
+f.close()
+e1, e2, cn = getresults(""68375_6420138_582823.txt"")
+#opens file and writes the choice and subchoice and club into the file
+createBarGraph(e1)
+createBarGraph(e2)
+createBarGraph(cn)
+#creates bar graphs for emotions and clubs
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Fish Bait Sorter provides the user with a premade list of Fish baits to choose from(25 total).The user can view the ""prelist"" if wanted as well. The user also has a ""Favourites list"", where the user can primarily add fish baits too, and if wanted .  Another feature is for the user to check the type of bait, which it can be live or artificial.  Many other mini functions are also present, like the fact that the user can't add the same bait twice, check their favorites list if it is empty, and etc.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+import os
+os.path.abspath(""List.txt"")
+print('Hello, I am a Fish lure guide for your collection of fish lures')
+print('You are able to go as you wish in this system.')
+print('But if you ever want to opt out and close the program, press q whenever presented.')
+print('To go through our options of what is possible, press 1 to see our list of fishing bait,')
+print(""press 2 to see and adjust your favorite's list if wanted, (Press q to exit program) "")
+#print(""And press 3 to  "")not sure for this one yet, but i want at least 3 options
+op = str(input())
+favorites_list = []
+def add(index):
+    pass
+    f = open('List.txt', 'r')
+    content = f.readlines()
+    x = favorites_list.append(content.)
+    return x
+def remove(Bait):
+    pass
+    #instead of going through a filem we just use the specific name of the bait, and locate it
+    #then remove it from favorites_list
+
+if op == '1':
+    F_L_L = open('List.txt', 'r')  
+    #Still trying to figure out how to grab the file from my computer, but the rest should work so far
+    content = F_L_L.read()
+    print(content)
+if op =='2':
+    print(""You can either add, remove or view your favorite's list"")
+    print('press 1 to add, 2 to remove, and 3 to view(Press q to exit program)')
+    opi = str(input())
+    if opi == '1':
+        print('Please enter the Bait # of what bait you want to add')
+
+
+    if opi =='2':
+        print('not dun yet') 
+
+    if opi =='3':
+        print('also not dun yet')
+    #if len(favorites_list)<0:
+     #   print('There is nothing in your list so far')
+    #if len(favorites_list)>0:
+     #   print('Here is whats in your list.')
+    if opi =='q':
+        print('Thank you for using the Fish lure guide :D')
+        exit()
+        
+if op =='q':
+    print('thank you for using the Fish lure guide :D')
+    exit()
+
+#not entirely done, but a lot of work added that was needed
+#will finish the ncessary portion of this project before the 20th
+#then will continue with the project as so.
+#also while i can't attach the txt file that is required to be used with this code
+#i will send an email with it to whoever needs it to test out the functionality of the code
+#when the code is ready
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Game where you try to roll higher than the computer.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+from random import randint
+import os
+
+if os.path.isfile('68572_6385821_7400501.txt'):
+  os.remove(""68572_6385821_7400501.txt"")
+f = open(""68572_6385821_7400501.txt"", ""a"")
+
+
+# Checks total rolls
+def check_die(score, die_value, die_number):
+  if die_value == die_number:
+    return 0
+  else:
+    return score + die_value
+
+
+# Roll
+def roll(numd, nums):
+  total_roll = 0
+  for a in range(numd):
+    total_roll = total_roll + randint(1, nums)
+  return total_roll
+
+
+# Display scoreboard
+def display_scoreboard(player_score, computer_score, file):
+  print(f""Your Score: {player_score}"")
+  print(f""Computer Score: {computer_score}"")
+  file.write(f""Your Score: {player_score}\n"")
+  file.write(f""Computer Score: {computer_score}\n"")
+
+
+player_score = 0
+computer_score = 0
+
+welcome_message = """"""
+          Simple Dice Game
+""""""
+
+print(welcome_message)
+
+# Set number of dice
+numdice = input(""Enter number of dice: "")
+
+numdice = int(numdice)
+f.write(f""Number of dice: {numdice}\n"")
+
+# Set number of sides on all dice
+numsides = input(""Enter number of sides the dice will have: "")
+
+numsides = int(numsides)
+f.write(f""Number of sides on each die: {numsides}\n"")
+
+# Set difficulty level
+difficultylevel = input(""Enter difficulty level: "")
+
+difficultylevel = int(difficultylevel)
+f.write(f""Difficulty level: {difficultylevel}\n"")
+
+winscore = numdice * numsides * difficultylevel
+f.write(f""Score required to win: {winscore}\n"")
+
+print(f""The score required to win is: {winscore}"")
+
+# While True loop
+while True:
+  input(f""Press Enter to roll\n"")
+
+  player_die_value = roll(numdice, numsides)
+  print(f""Your roll: {player_die_value}"")
+  f.write(f""Your roll: {player_die_value}\n"")
+
+  computer_die_value = roll(numdice, numsides)
+  print(f""Computer roll: {computer_die_value}"")
+  f.write(f""Computer roll: {computer_die_value}\n"")
+
+  player_score = check_die(player_score, player_die_value, numdice)
+  computer_score = check_die(computer_score, computer_die_value, numdice)
+
+  display_scoreboard(player_score, computer_score, f)
+
+  if (player_score >= winscore) and (computer_score >= winscore) and (
+      player_score == computer_score):
+    print(""Both have reached the winning score. Greater roll wins!"")
+    while (player_score == computer_score):
+      if player_score > computer_score:
+        print(f""Winner: You"")
+        f.write(f""Winner: You\n"")
+        break
+      elif computer_score > player_score:
+        print(""Winner: Computer"")
+        f.write(f""Winner: Computer\n"")
+        break
+  elif player_score >= winscore:
+    print(f""Winner: You"")
+    f.write(f""Winner: You\n"")
+    break
+  elif computer_score >= winscore:
+    print(""Winner: Computer"")
+    f.write(f""Winner: Computer\n"")
+    break
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Users load in a file with the games that they own. The project lets the user make choices about those games so that details such as hours played, levels completed, and achievements/badges earned can be recorded for each game. SimSteam would then report, visualize, and write outputs of consolidated information to a file for the user.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+#Intro to my code
+
+print(""Hello, User! This is an application where you will be able to upload files from games that you have played or are currently playing to check your progress for those games."")
+
+#Code to allow the user to upload a file
+
+
+def upload_file():
+    file_name = input(""Enter the name of the file: "") # change print option
+    with open(file_name, ""a"") as file: # change w to a
+        content = input(""Enter the content of the file: "")
+        file.write(content)
+    print(f""File '{file_name}' has been uploaded."")
+
+def display_file_content():
+  file_name = input(""Enter exact name of file: "")
+  try:
+    with open(file_name,""r"") as file:
+      content = file.read()
+      print(f""Contents\n{content}"")
+  except FileNotFoundError:
+    print(f""The file {file_name} does not exist"")
+
+
+#Code for profile menu option
+
+def profile_menu():
+    while True:
+        sub_profile = input(f""Please select an option from the following choices for Profile: {Activities}, {Favorite_Games}, {Achievements}, or 'back' to go back: "").strip()
+
+        if sub_profile == ""back"":
+            break
+
+        if sub_profile == Activities:
+            print(""Welcome to your Activities."")
+            file_upload = input(""Do you want to upload a file (yes/back)? "").strip().lower()
+            if file_upload == ""yes"":
+                upload_file()
+        elif sub_profile == Favorite_Games:
+            print(""Here is a list of your favorite games."")
+            fil_upload = input(""Do you want to upload a file (yes/back)? "")
+            if filed_upload == ""yes"":
+                upload_file()
+        elif sub_profile == Achievements:
+            print(""Here is a list of all your achievements."")
+            file_upload = input(""Do you want to upload a file (yes/back)? "").strip().lower()
+            if file_upload == ""yes"":
+                upload_file()
+        else:
+            print(""Option is invalid, please choose a valid option"")
+
+#Code for library menu option
+
+def library_menu():
+    while True:
+        sub_library = input(f""Please select an option from the following choices for Library: {All_Games}, {DLC}, or 'back' to go back: "").strip()
+
+        if sub_library == ""back"":
+            break
+
+        if sub_library == All_Games:
+            print(""Here is a list of all your games."")
+            file_upload = input(""Do you want to upload a file (yes/back)? "").strip().lower()
+            if file_upload == ""yes"":
+                upload_file()
+        elif sub_library == DLC:
+            print(""Here is a list of all your DLC."")
+            file_upload = input(""Do you want to upload a file (yes/back)? "").strip().lower()
+            if file_upload == ""yes"":
+                upload_file()
+        else:
+            print(""Option is invalid, please choose a valid option"")
+
+#Variables being defined
+
+Profile = ""Profile""
+Library = ""Library""
+Activities = ""Activities""
+Favorite_Games = ""Favorite Games""
+Achievements = ""Achievements""
+All_Games = ""All Games""
+DLC = ""DLC""
+
+#Simplified code that uses the defined functions above
+
+while True:
+    menu = input(f""Please select an option from the following choices: {Profile}, {Library}, View or 'exit' to quit: "").strip()
+
+    if menu == ""exit"":
+        break
+
+    if menu == Profile:
+        profile_menu()
+    elif menu == Library:
+        library_menu()
+    elif menu == 'View':
+        display_file_content()
+    else:
+        print(""Menu option is invalid, please choose a valid option"")
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Write a program that finds the ways each charger works for a car, and how to improve each one by the code.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+import matplotlib.pyplot as plt
+
+def calculate_turbo_horsepower(turbo_size_mm, turbo_brand, num_turbos):
+    if turbo_size_mm > 88:
+        if turbo_brand == ""Garrett"":
+            additional_horsepower_per_turbo = 8
+        elif turbo_brand == ""Holset"":
+            additional_horsepower_per_turbo = 6
+        elif turbo_brand == ""BorgWarner"":
+            additional_horsepower_per_turbo = 12
+        else:
+            additional_horsepower_per_turbo = 0
+
+        total_additional_horsepower = num_turbos * additional_horsepower_per_turbo
+    else:
+        total_additional_horsepower = 0
+
+    return total_additional_horsepower
+
+def calculate_score(horsepower, fuel_efficiency, has_turbo, turbo_size_mm, turbo_brand, num_turbos):
+    turbo_horsepower = 0
+    if has_turbo:
+        turbo_horsepower = calculate_turbo_horsepower(turbo_size_mm, turbo_brand, num_turbos)
+    score = horsepower / 10 + turbo_horsepower
+    score -= fuel_efficiency
+    return score
+
+scores_car1 = []
+scores_car2 = []
+
+while True:
+    print(""Car Comparison Tool. This Comparison tool takes little to no knowledge about a car, and anything not known can be found with a simple google search."")
+    print(""Choose an option:"")
+    print(""1. Compare cars"")
+    print(""2. Exit"")
+
+    choice = input(""Enter your choice (1/2): "")
+
+    if choice == '1':
+        car1_horsepower = float(input(""Enter the horsepower of the first car: ""))
+        car1_fuel_efficiency = float(input(""Enter the fuel efficiency of the first car (miles per gallon): ""))
+        car1_has_turbo = input(""Does the first car have a turbo (yes/no)? "").lower() == 'yes'
+        car1_turbo_size_mm = 0
+        car1_turbo_brand = """"
+        car1_num_turbos = 0
+
+        if car1_has_turbo:
+            car1_turbo_size_mm = float(input(""Enter the turbo size of the first car (in millimeters): ""))
+            car1_turbo_brand = input(""Enter the turbo brand of the first car (Garrett/Holset/BorgWarner): "")
+            car1_num_turbos = int(input(""Enter the number of turbos: ""))
+
+        car2_horsepower = float(input(""Enter the horsepower of the second car: ""))
+        car2_fuel_efficiency = float(input(""Enter the fuel efficiency of the second car (miles per gallon): ""))
+        car2_has_turbo = input(""Does the second car have a turbo (yes/no)? "").lower() == 'yes'
+        car2_turbo_size_mm = 0
+        car2_turbo_brand = """"
+        car2_num_turbos = 0
+
+        if car2_has_turbo:
+            car2_turbo_size_mm = float(input(""Enter the turbo size of the second car (in millimeters): ""))
+            car2_turbo_brand = input(""Enter the turbo brand of the second car (Garrett/Holset/BorgWarner): "")
+            car2_num_turbos = int(input(""Enter the number of turbos: ""))
+
+        car1_score = calculate_score(car1_horsepower, car1_fuel_efficiency, car1_has_turbo, car1_turbo_size_mm, car1_turbo_brand, car1_num_turbos)
+        car2_score = calculate_score(car2_horsepower, car2_fuel_efficiency, car2_has_turbo, car2_turbo_size_mm, car2_turbo_brand, car2_num_turbos)
+        scores_car1.append(car1_score)
+        scores_car2.append(car2_score)
+        print(""\nComparison Results:"")
+        print(f""Car 1 Score: {car1_score}"")
+        print(f""Car 2 Score: {car2_score}"")
+
+        if car1_score > car2_score:
+            print(""Car 1 is better."")
+        elif car2_score > car1_score:
+            print(""Car 2 is better."")
+        else:
+            print(""Both cars are equally good."")
+
+    elif choice == '2':
+        print(""Thank you for using the Car Comparison Tool"")
+
+        total_score_car1 = sum(scores_car1)
+        total_score_car2 = sum(scores_car2)
+
+
+        plt.figure(figsize=(6, 4))
+        plt.bar(['Car 1', 'Car 2'], [total_score_car1, total_score_car2])
+        plt.xlabel('Cars')
+        plt.ylabel('Total Score')
+        plt.title('Total Score Comparison')
+        plt.show()
+
+
+    else:
+        print(""Invalid choice. Please enter 1 or 2."")
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Implement an algorithm to solve mazes. You could use algorithms like depth-first search or breadth-first search and explore how maze complexity affects solving time. The output would be the solved maze, possibly visualized with the path highlighted.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+print('Welcome user\nThe computer will automatically execute the code created to solve a maze.\n')
+print('The code has to be overwritten prior to being run, meaning only the programmer  may choose the maze.\n')
+print(""This code was too complicated for me to write completely. I used external services to write this code. No inputs could be made into the maze to change the maze as the individual wants.\n"")
+import queue
+
+# creating an empty string for lists and putting the maze strings in the list
+
+def createMaze():
+    maze = []
+    maze.append([""#"", ""#"", ""#"", ""#"", ""#"", ""#"", ""O"", ""#"", ""#"", ""#""])
+    maze.append([""#"", "" "", "" "", ""#"", "" "", ""#"", "" "", ""#"", ""#"", ""#""])
+    maze.append([""#"", "" "", "" "", "" "", "" "", ""#"", "" "", ""#"", "" "", ""#""])
+    maze.append([""#"", "" "", ""#"", ""#"", "" "", "" "", "" "", "" "", "" "", ""#""])
+    maze.append([""#"", ""#"", ""#"", ""#"", "" "", ""#"", "" "", "" "", ""#"", ""#""])
+    maze.append([""#"", "" "", "" "", "" "", "" "", "" "", ""#"", "" "", "" "", ""#""])
+    maze.append([""#"", ""X"", ""#"", ""#"", ""#"", ""#"", ""#"", ""#"", ""#"", ""#""])
+
+# returns the maze chosen in the programmer by the programmer
+
+    return maze
+
+def createMaze2():
+    maze = []
+    maze.append([""#"", ""#"", ""#"", ""#"", ""O"", ""#"", ""#"", ""#"", ""#"", ""#""])
+    maze.append(["" "", "" "", "" "", "" "", "" "", "" "", "" "", "" "", "" "", ""#""])
+    maze.append(["" "", ""#"", "" "", ""#"", "" "", "" "", ""#"", "" "", ""#"", ""#""])
+    maze.append(["" "", "" "", ""#"", ""#"", ""#"", "" "", ""#"", "" "", ""#"", ""#""])
+    maze.append([""#"", "" "", "" "", "" "", "" "", "" "", ""#"", "" "", "" "", "" ""])
+    maze.append([""#"", "" "", ""#"", ""#"", ""#"", "" "", "" "", ""#"", "" "", ""#""])
+    maze.append([""#"", "" "", "" "", "" "", "" "", ""#"", ""#"", ""#"", "" "", ""#""])
+    maze.append([""#"", ""#"", ""#"", ""#"", ""X"", ""#"", ""#"", ""#"", ""#"", ""#""])
+
+    return maze
+
+def createMaze3():
+    maze = []
+    maze.append([""#"", ""O"", ""#"", ""#"", ""#"", ""#"", ""#"", ""#"", ""#"", ""#""])
+    maze.append(["" "", "" "", "" "", "" "", "" "", "" "", "" "", "" "", "" "", ""#""])
+    maze.append(["" "", ""#"", "" "", ""#"", "" "", "" "", ""#"", "" "", ""#"", ""#""])
+    maze.append(["" "", "" "", ""#"", ""#"", ""#"", "" "", ""#"", "" "", ""#"", ""#""])
+    maze.append([""#"", "" "", "" "", "" "", "" "", "" "", ""#"", "" "", "" "", "" ""])
+    maze.append([""#"", "" "", ""#"", ""#"", ""#"", "" "", "" "", ""#"", "" "", ""#""])
+    maze.append([""#"", "" "", "" "", "" "", "" "", ""#"", ""#"", "" "", "" "", ""#""])
+    maze.append([""#"", ""#"", ""#"", ""#"", ""#"", ""#"", ""#"", ""X"", ""#"", ""#""])
+
+    return maze
+
+# prints the maze and validates the maze's entrance, sides and exits
+
+def printMaze(maze, path = "" ""):
+    for x, pos in enumerate(maze[0]):
+        if pos == ""O"":
+            start = x
+
+    i = start
+    j = 0
+    pos = set()
+    for move in path:
+        if move == ""L"":
+            i -= 1
+
+        elif move == ""R"":
+            i += 1
+
+        elif move == ""U"":
+            j -= 1
+
+        elif move == ""D"":
+            j += 1
+        pos.add((j, i))
+
+    for j, row in enumerate(maze):
+        for i, col in enumerate(row):
+            if (j, i) in pos:
+                print(""+ "", end="" "")
+            else:
+                print(col + "" "", end="" "")
+        print()
+
+# Gives the computer moves and tells the outline of the maze and having the computer tell whether that path is the shortest
+
+def valid(maze, moves):
+    for x, pos in enumerate(maze[0]):
+        if pos == ""O"":
+            start = x
+
+    i = start
+    j = 0
+    for move in moves:
+        if move == ""L"":
+            i -= 1
+
+        elif move == ""R"":
+            i += 1
+
+        elif move == ""U"":
+            j -= 1
+
+        elif move == ""D"":
+            j += 1
+
+        if not(0 <= i < len(maze[0]) and 0 <= j < len(maze)):
+            return False
+        elif (maze[j][i] == ""#""):
+            return False
+
+    return True
+
+
+# Allows the computer to use the moves to find the end of the maze with the fastest possible solution
+
+def findEnd(maze, moves):
+    for x, pos in enumerate(maze[0]):
+        if pos == ""O"":
+            start = x
+
+    i = start
+    j = 0
+    for move in moves:
+        if move == ""L"":
+            i -= 1
+
+        elif move == ""R"":
+            i += 1
+
+        elif move == ""U"":
+            j -= 1
+
+        elif move == ""D"":
+            j += 1
+
+    if maze[j][i] == ""X"":
+        print(""Found: "" + moves)
+        printMaze(maze, moves)
+        return True
+    
+    return False
+
+# Is the main structure of the program, creating the queue for the maze and letting LRUD to be introduced to the Queue till the moves do not equal to X
+
+nums = queue.Queue()
+nums.put("""")
+add = "" ""
+maze = createMaze3()
+
+while not findEnd(maze, add):
+    add = nums.get()
+    #print(add)
+    for j in [""L"", ""R"", ""U"", ""D""]:
+        put = add + j
+        if valid(maze, put):
+            nums.put(put)
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+User has to guess a randomly generated number
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+Python 3.11.5 (v3.11.5:cce6ba91b3, Aug 24 2023, 10:50:31) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
+Type ""help"", ""copyright"", ""credits"" or ""license()"" for more information.
+import random
+
+def guess_the_number():
+...     secret_number = random.randint(1, 100)
+...     attempts = 0
+...     max_attempts = 10
+... 
+...     print(""Welcome to the Guess the Number Game!"")
+...     print(""I'm thinking of a number between 1 and 100. Can you guess it? You have 10 attempts."")
+... 
+...     while attempts < max_attempts:
+...         try:
+...             guess = int(input(""Enter your guess: ""))
+...             attempts += 1
+... 
+...             if guess < secret_number:
+...                 print(""Try higher."")
+...             elif guess > secret_number:
+...                 print(""Try lower."")
+...             else:
+...                 print(f""Congratulations! You guessed the number {secret_number} in {attempts} attempts."")
+...                 break
+...         except ValueError:
+...             print(""Invalid input. Please enter a valid number."")
+... 
+...     if attempts >= max_attempts:
+...         print(f""Sorry, you've run out of attempts. The secret number was {secret_number}."")
+... 
+... if __name__ == ""__main__"":
+...     while True:
+...         guess_the_number()
+...         while True:
+...             play_again = input(""Do you want to play again? (yes/no): "").lower()
+...             if play_again == ""yes"":
+...                 break
+...             elif play_again == ""no"":
+...                 exit()
+...             else:
+...                 print(""Please enter 'yes' or 'no'."")
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Create a hangman game that chooses a random word read from a file
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+import random
+
+# Function to choose a random word from a file
+def choose_random_word(filename):
+    with open(filename, 'r') as file:
+        words = file.readlines()
+    return random.choice(words).strip()
+
+# Function to display the current state of the word with hidden letters
+# Also shows the user what letters are used and how many letters are left.
+def display_word(word, guessed_letters):
+    display = """"
+    for letter in word:
+        if letter in guessed_letters:
+            display += letter
+        else:
+            display += ""_""
+    return display
+
+# Function to display the hangman based on the number of incorrect attempts
+def display_hangman(hangman_state):
+    hangman_parts = [
+        """"""
+           _______
+          |       |
+                  |
+                  |
+                  |
+                  |
+        """""",
+        """"""
+           _______
+          |       |
+          O       |
+                  |
+                  |
+                  |
+        """""",
+        """"""
+           _______
+          |       |
+          O       |
+          |       |
+                  |
+                  |
+        """""",
+        """"""
+           _______
+          |       |
+          O       |
+         /|       |
+                  |
+                  |
+        """""",
+        """"""
+           _______
+          |       |
+          O       |
+         /|\      |
+                  |
+                  |
+        """""",
+        """"""
+           _______
+          |       |
+          O       |
+         /|\      |
+         /        |
+                  |
+        """""",
+        """"""
+           _______
+          |       |
+          O       |
+         /|\      |
+         / \      |
+                  |
+        """"""
+    ]
+    print(hangman_parts[hangman_state])
+
+# Main Hangman game
+def hangman_game():
+    # Choose a random word from file random_words file
+    word = choose_random_word(""69427_6422405_3545061.txt"")
+    guessed_letters = []
+    hangman_state = 0  # Current hangman state
+
+    print(""Welcome to Hangman!"")
+    print(""Guess the word one letter at a time."")
+    print(""Only letters no symbols."")
+
+    while True:
+        display_hangman(hangman_state)
+        word_display = display_word(word, guessed_letters)
+        print(word_display)
+
+        if word_display == word:
+            print(""Congratulations! You've won. The word was:"", word)
+            break
+        
+        # Max hangman state and max incorrect guess allowed
+        if hangman_state == 6:
+            print(""Oh no! You've been hanged! The word was:"", word)
+            break
+
+        guess = input(""Guess a letter: "").lower()
+        
+        #checks if only one letter is entered
+        # guess.isalpha() checks if symbols are entered and lets user know to enter a single letter
+        if len(guess) != 1 or not guess.isalpha():
+            print(""Please enter a single letter."")
+            continue
+        
+        # If letter has been guessed or not
+        if guess in guessed_letters:
+            print(""You've already guessed that letter."")
+        elif guess in word:
+            guessed_letters.append(guess)
+            print(""Good guess!"")
+            
+        # Shows how many attempts are left
+        else:
+            guessed_letters.append(guess)
+            hangman_state += 1
+            print(""Incorrect guess. You have"", 6 - hangman_state, ""attempts left."")
+
+if __name__ == ""__main__"":
+    hangman_game()
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+There will be a number and the user will receive random numbers generated in between. The user will receive a random number and type either higher and lower until the user matches the number. Will keep a log of the total time it took to guess the number.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+import random
+
+def game(): # This entire statement gives me a random number between 1-1000
+    score = 0
+    blah = True
+    while blah == True: # You will be able to play/guess ten times
+        print(""Will the next number be Higher or Lower? :)"")
+        num1 = random.randint(1, 1000)
+        num2 = random.randint(1, 1000)
+        print(""Current Number:"", num1)
+        response = input(""Higher or Lower: "").strip().lower() # User inputs either Higher or Lower
+
+        if (num1 < num2 and response == ""higher"") or (num1 > num2 and response == ""lower""): # This depends on the random numbers given 
+            print(""You Win!"")
+            score += 1 # The more you guess correctly, you get one point each time
+            print(""The Next Number was"", num2)
+        else:
+            print(""Game Over! The Next Number was"", num2)
+            print(""Your final score is:"", score)
+            return score # Prints the score 
+
+
+print(""Welcome to the game of Higher or Lower! Guess correctly to achieve a high score!"") # Intro/ Welcoming to the game
+game() # This function is for the top part 
+print(""Thank You for Playing :)"")
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Create a program that reads saves contact information.It will also calculate the price of the cake they ordered. It will also suggest pre made cake flavors.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+from PIL import Image
+filename= ""69587_6421973_3696433.PNG""
+img = Image.open(filename)
+img.show()
+
+name = ""empty""
+bread_choice = ""empty""
+filling_flavor = ""empty""
+decoration_theme = ""empty""
+
+print(""***Welcome to The Silly Goose Ordering Site!***"")
+print(""Here, we will take your desired cake and turn it into with a few questions."")
+
+orders = {}  # Initialize an empty dictionary to store orders
+
+while True:
+    order_cake = input(""\nWould you like to order a cake? (Press 1 for yes, 2 for no, 3 to check order): "")
+
+    if order_cake == ""2"":
+        print(""Thank you for visiting The Silly Goose Co. Have a nice day!"")
+        break
+    elif order_cake == ""3"":
+        customer_name = input(""Enter your name to retrieve your order: "")
+        if customer_name in orders:
+            order = orders[customer_name]
+            print(f""Order details for {customer_name}:\n{order}"")
+            edit_order = input(""Would you like to edit your order? (yes/no): "")
+            if edit_order.lower() == ""yes"":
+                edit_field = input(""Which field would you like to edit (name, phone, email, size, bread, filling, theme/decoration, or additional comments)? Enter 'done' to continue: "")
+
+                if edit_field == ""name"":
+                   new_name = input(""Please enter the new name: "")
+                   orders[new_name] = orders.pop(customer_name)
+                   customer_name = new_name
+                elif edit_field == ""phone"":
+                   new_phone = input(""Please enter the new phone: "")
+                   orders[customer_name]['phone_number'] = new_phone
+                elif edit_field == ""email"":
+                   new_email = input(""Please enter the new email address: "")
+                   orders[customer_name]['email'] = new_email
+                elif edit_field == ""size"":
+                  area = float(input(""What size would you like the cake? (inches): ""))
+                  total_price = 2 * area
+                  orders[customer_name]['area'] = area
+                  orders[customer_name]['total_price'] = total_price
+                elif edit_field == ""bread"":
+                  new_bread_choice = input(""What type of bread would you like? (Chocolate, Vanilla, Strawberry, custom): "")
+                  orders[customer_name]['bread_choice'] = new_bread_choice
+                elif edit_field == ""filling"":
+                  new_filling_flavor = input(""What type of filling would you like in your cake? (Strawberry, Blueberry, Raspberry, Chocolate, custom): "")
+                  orders[customer_name]['filling_flavor'] = new_filling_flavor
+                elif edit_field == ""theme/decoration"":
+                   new_decoration_theme = input(""What type of decoration would you like on your cake? Please enter your theme/decorations: "")
+                   orders[customer_name]['decoration_theme'] = new_decoration_theme
+                elif edit_field == ""additional comments"":
+                   additional_comments = input(""Any additional comments? (yes/no): "")
+                   if additional_comments.lower() == ""yes"":
+                     new_user_comments = input(""Please type your new comments: "")
+                orders[customer_name]['additional_comments'] = new_user_comments
+
+            print(""You have updated your order."")
+        else:
+            print(f""Order for {customer_name} not found."")
+    elif order_cake == ""1"":
+        name = input(""Please enter your name: "")
+        phone_number = input(""Please enter your phone number: "")
+        email = """"
+
+        while True:
+            contact_method = input(""How would you like to be contacted (call, text, email)? "").lower()
+
+            if contact_method == ""email"":
+                email = input(""Please enter your email address: "")
+                print(f""Thank you, {name}! We will contact you via email at {email}."")
+                break
+            elif contact_method == ""call"":
+                print(f""Thank you, {name}! We will contact you by phone at {phone_number}."")
+                break
+            elif contact_method == ""text"":
+                print(f""Thank you, {name}! We will send you a text message at {phone_number}."")
+                break
+            else:
+                print(""Invalid contact method. Please choose from call, text, or email."")
+
+        area = float(input(""\nWhat size would you like the cake? (inches): ""))
+        total_price = 2 * area
+        print(f""Total is: ${total_price}"")
+
+        bread_choice = input(""\nWhat type of bread would you like? (Chocolate, Vanilla, Strawberry, custom): "")
+        filling_flavor = input(""What type of filling would you like in your cake? (Strawberry, Blueberry, Raspberry, Chocolate, custom): "")
+        decoration_theme = input(""What type of decoration would you like on your cake? Please enter your theme/decorations: "")
+        additional_comments = input(""Any additional comments? (yes/no): "")
+        user_comments = """"
+        if additional_comments.lower() == ""yes"":
+            user_comments = input(""Please type your comments: "")
+
+        # Store the order details in the dictionary
+        order_details = {
+            ""name"": name,
+            ""phone_number"": phone_number,
+            ""email"": email,
+            ""area"": area,
+            ""total_price"": total_price,
+            ""bread_choice"": bread_choice,
+            ""filling_flavor"": filling_flavor,
+            ""decoration_theme"": decoration_theme,
+            ""additional_comments"": user_comments,
+        }
+        orders[name] = order_details  # Use the customer's name as the key
+        print(""Thank you {name} for your order!\nYou've chosen {bread_choice} bread\nwith {filling_flavor} filling\nand the theme '{decoration_theme}'.\nWe will send you a message when it's ready for pick up!\nThank You for ordering at The Silly Goose Co.\n?(??????)?"")
+
+print(f""Thank you {name} for your order!\nYou've chosen {bread_choice} bread\nwith {filling_flavor} filling\nand the theme '{decoration_theme}'.\nWe will send you a message when it's ready for pick up!\nThank You for ordering at The Silly Goose Co.\n?(??????)?"")
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Explains what a Palindrome is and checks if a user inputs a Palindrome.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+while True:
+#allows for infinite loops provided that there are no breaks
+    print(""\nWelcome to the Palindrome Checker!"")
+    print(""Verify if your word(s) are Palindromes"")
+    
+    print(""\nPlease select from the options below:"")
+    print(""1. What is a palindrome?"")
+    print(""2. Palindrome checker"")
+    print(""3. Exit"")
+#options 
+    choice = input(""Your selection (1/2/3): "")
+    
+    if choice == ""1"":
+        print(""\nA Palindrome is a word, phrase, or sequence that reads the same backward as forward."")
+        print(""For example, the word 'MOM' is a palindrome because it remains the same when read backward."")
+        
+        question = input(""Would you like more examples? (Yes/No): "")
+        if question.lower() == ""yes"":
+#accounts for minor errors/ease of use; turns user input to lowercase
+            print(""Other palindromes include 'DAD,' '202,' 'MADAM,' and '177771.'\n"")
+        elif question.lower() == ""no"":
+#accounts for minor errors/ease of use; turns user input to lowercase
+            print(""\n"")
+    
+    elif choice == ""2"":
+        print(""\nPlease select the function of the palindrome checker:"")
+        print(""1. Verify palindromes within a CSV file"")
+        print(""2. Exit"")
+#sub_options        
+        sub_choice = input(""Enter your choice (1/2): "")
+#sub-category of questions within the loop
+        if sub_choice == ""1"":
+            import csv
+            def palindrome_checker(word): 
+                word = word.lower()
+                return word == word[::-1]
+#Palindrome_checker becomes a function that reads values backwards as the ""-1"" suggests
+
+            csv_file_path = ""69666_6398457_3728313.csv""
+#Uploaded csv file in use for this; the r lets python interpret it location or read the file 
+
+            palindromes = []                                        #the empty palindrome container
+            with open(csv_file_path, 'r') as file:
+                reader = csv.reader(file)
+                for row in reader:
+                    for word in row:
+                        if palindrome_checker(word):
+                            palindromes.append(word)
+#Each for statement breaks the given file down until it reaches a singular value... the word
+#Then will be plugged into the function to where values deemed as palindromes will be added to the empty palindrome container 
+
+            if palindromes:
+                print(""\nPalindromes found in the CSV file:"")
+                for word in palindromes:
+                    print(word)
+#Values deemed palindromes will then go into the palindrome container where the print statement will show
+            else:
+                print(""\nNo palindromes found in the CSV file."")
+#will show if the file doesn't contain any palindromes                
+        elif sub_choice == ""2"":
+            break
+        else:
+            print(""Invalid input. Please enter 1 or 2."")
+#accounts for errors by directing the user with correct instructions
+    elif choice == ""3"":
+#exits the main script
+        print(""\nThank you for using the palindrome checker. Goodbye!"")
+        break
+#here to end any further iterations, or stop any continuation
+    else:
+        print(""Invalid input. Please select 1, 2, or 3."")
+#accounts for any mistakes in the first stage
+
+
+#contains a palindrome function ""palindrome_checker""
+#contains a loop using ""while true:""
+#contains sufficient branch statements with the use of ""if/elif/else""
+#uses sub-sections with the previously mentioned brach statements
+#contains a csv file
+#contains comments for the purpose of clarity and explanation
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Develop a program to simulate simple game theory scenarios like the Prisoner's Dilemma. You can explore how different strategies perform in repeated games. Outputs would include statistics like win rates for each strategy.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+print('\nHi! Welcome to the Game Theory Python Project!!')
+print(""This project will focus on the Prisoner's Dilemma Scenario"")
+print()
+
+#reference: https://www.investopedia.com/terms/p/prisoners-dilemma.asp#:~:text=The%20prisoner's%20dilemma%20presents%20a,parties%20choose%20to%20co%2Doperate.
+import random                                                   #imports the random module 
+
+#defining global variables
+num_betray = int()                                              #variable for number of betrayals
+num_cooperate = int()                                           #variable for the number of cooperations
+num_prison = int()                                              #variable for the number of time sent to prison
+prison_alone = int()                                            #variable for the number of times Ayush was sent to prison alone
+revenge = int()                                                 #variable for the number of times Ayush chooses revenge during his sentence 
+escape = int()                                                  #variable for the number of times Ayush chooses to escape during his sentence
+num_revenge = int()                                             #variable for the number of times Ayush commits to revenge
+num_escape = int()                                              #variable for the number of times Ayush has escaped from prison
+num_peace = int()                                               #creates a variable for number of times user wants peace
+
+#asks the user how many times they would like the game to loop
+loops = int(input(""How many times would you like to play this game? (Please choose a whole number) ""))
+if loops <= 0:
+    print(""Please enter a valid number"")
+    exit()
+
+def percentage(value):                                          #functions that calculates the percentages of user's choices / times sent to prison          
+    value_percent = round(float((value / loops) * 100), 2)
+    return value_percent
+
+def alone_percentage(alone_choice):                             #functions that calculate the percentage of the choices when sent to prison alone
+    if prison_alone > 0:                                        #percentages can't be calculated if denominator = 0
+        alone_percent = round(float((alone_choice / prison_alone) * 100), 2)
+        return alone_percent
+    else:
+        alone_percent == 0
+        return alone_percent
+
+#explains the general scenario for Prisoner's Dilemma
+print('\nThere are 2 robbers, Ayush and Pandey, who have been arrested for robbing a bank.')
+print(""There were no witnesses to the robbery, so the police can only rely on the robbers' confessions"")
+print('As such, the robbers have been sepearated from each other, so neither will know what the other will say (or confess).')
+
+for x in range(0, loops):                                       #game will loop as many times as the user would like
+    #defining local variables for amount of years sent to prison (resets with each loop)
+    ayush_sentence = int()
+    pandey_sentence = int()
+
+    #user will choose an action for Ayush
+    print('\nYou are playing as Ayush. Choose an action: ')
+    print('A - Betray Pandey - Say that Pandey robbed the bank')
+    print(""B - Cooperate - confess Ayush's crime"")
+    user_choice1 = input()
+
+    pandey_choice = ['A', 'B']                                  
+    pandey_choice = random.choice(pandey_choice)                #randomly chooses an action for Pandey
+    
+    if user_choice1.upper() =='A':                              #if user chooses to betray Pandey
+        print(""Ayush has betrayed Pandey!"")
+        num_betray += 1
+        if pandey_choice == 'A':                                #if Pandey betrays Ayush
+            print(""Pandey has chosen to betray Ayush!"")
+            ayush_sentence += 3                                 #Ayush is sentenced to 3 years of prison
+            pandey_sentence += 3                                #Pandey is sentenced to 3 years of prison
+            num_prison += 1
+        
+        elif pandey_choice == 'B':                              #if Pandey cooperates
+            print(""Pandey confessed and said that he robbed the bank!"")
+            pandey_sentence += 5                                #Pandey is sentenced to 5 years of prison
+    
+    elif user_choice1.upper() == 'B':                           #user chose to cooperate with the authorities
+        print(""Ayush has confessed to his crime!"")
+        num_cooperate += 1
+        num_prison += 1
+        
+        if pandey_choice == 'A':                                #if Pandey betrays Ayush
+            print(""Pandey has chosen to betray you!"")
+            prison_alone += 1
+            ayush_sentence += 5                                 #Ayush is senteneced to 5 years of prison
+        
+        elif pandey_choice == 'B':                              #if Pandey cooperates
+            print(""Pandey confessed and said that he robbed the bank!"")
+            ayush_sentence += 1                                 #Ayush is sentenced to 1 year of prison
+            pandey_sentence += 1                                #Pandey is sentenced to 1 year of prison
+    
+    else:                                                       #if user enters an invalid input
+        print()
+        print(""What you chose isn't an available option, please play again"")
+        break
+    
+    if ayush_sentence == 0 and pandey_sentence != 0:            #printed if only Pandey was sent to prison
+        print(""Pandey was sent to prison!"")
+        print(f'Pandey was sentenced to {pandey_sentence} years in prison.')
+    
+    elif ayush_sentence != 0:                                   #printed if Ayush is sentenced to prison
+        if pandey_sentence != 0:                                #printed if Pandey is sent to prison too
+            print('Ayush and Pandey are both brought to prison for their crimes.')
+            print(f'Ayush is sentenced to {ayush_sentence} years in prison.')
+            print(f'Pandey is sentenced to {pandey_sentence} years in prison.')
+        
+        elif pandey_sentence == 0:                              #game will continue only if Ayush wsa sent to prison alone
+            print('Pandey is set free.')
+            print('Ayush has been sent to prison!')
+            print(f'Ayush is sentenced to {ayush_sentence} years in prison.')
+            print(""Ayush, in prison, notices that Pandey wasn't sentenced as well"")
+            print(""Knowing that he was betrayed, Ayush could only wait until his sentence was up... or would he?\n"")
+            
+            for i in range(0, ayush_sentence):                  #user will choose the an action for each year of Ayush's sentence  
+                print(f""Choose an action for year {i} of the sentence: "")
+                print(""(To escape or to seek revenge, it must be chosen twice. So choose carefully)"")
+                print(""A - Plan for revenge"")
+                print(""B - Plan to escape"")
+                print('C - Peacefully wait for sentence to end')
+                sentence_choice = input()
+
+                if sentence_choice.upper() == 'A':              #plan for revenge
+                    revenge += 1
+                    if revenge % 2 == 0:                        #if revenge is chosen 2 times, Ayush will seek revenge on Pandey
+                        print(""Ayush decided to seek out Pandey for revenge after his sentence!"")
+                        num_revenge += 1  
+                        break
+                
+                elif sentence_choice.upper() == 'B':            #plan for escape
+                    escape += 1
+                    if escape % 2 == 0:                         #if escape is chosen 2 times, Ayush will break out of prison
+                        print(""Ayush broke out of prison!"")
+                        num_escape += 1
+                        break
+                
+                elif sentence_choice.upper() == 'C':            #if user choose the 'peaceful' ending
+                    print(""Ayush decided that he no longer wanted to be a criminal and turned over a new leaf!"")
+                    num_peace += 1
+                    break
+
+print(""\nUser statistics:"")                                     #gives the user the statistics / percentages of their choices
+print(f""Betrayed Pandey: {percentage(num_betray)}%"")
+print(f""Cooperated with the police: {percentage(num_cooperate)}%"")
+print(f""Sent to prison: {percentage(num_prison)}%"")
+if prison_alone > 0:
+    print(""\nStatistics if only Ayush was sent to prison:"")
+    print(f""Escaped prison: {alone_percentage(num_escape)}%"")
+    print(f""Planned for revenge: {alone_percentage(num_revenge)}%"")
+    print(f""Choose the peaceful ending: {alone_percentage(num_peace)}%"")
+print(""\nThanks for playing!!\n"")
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Ask the user to choose a city and fruit tree from the provided list to calculate if it would thrive there depending on the USDA's hardiness zones, average rainfall, and average temperature. Also include if a plant should be regularly watered if there isn't enough rainfall. Use two text files, one including all of the city's information and one including all of the plant's information.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+#-----------------------------------User Input for City of Choice--------------------------
+Choice_1 = input('Please choose one from the from the list of Cities: \nNew York \nLos Angeles \nHouston \nSeattle \nSan Francisco \nDallas \nPhiladelphia \nMiami \nAtlanta \nMerced \nChicago \n')
+Verify_1 = ['new york', 'los angeles', 'houston', 'seattle', 'san francisco', 'dallas', 'chicago', 'miami', 'philadelphia', 'merced', 'atlanta', 'dev']
+Choice_1_lower = Choice_1.lower() #Forcing input to be in lower case so there isn't a problem in registering it, Although it does make the grammar incorrect in the print lines. 
+if Choice_1_lower in Verify_1: #Makes sure that the input is in the list 
+    print('You have chosen:', Choice_1)
+else:
+    print('City not found in provided list, please try again')
+    end1 = input('Press enter to exit code\n')
+    quit()
+
+#-----------------------------User Input of Fruit tree of Choice--------------------------------------------
+Choice_2 = input('Now, from the following list please select the fruit tree you want to plant in your city: \n(Please type your answer as ""Fruit tree"" where Fruit is your choice) \nPeach tree \nAvocado tree \nApple tree \nCherry tree \nMango tree \nPear tree \nSoursop tree \n')
+Verify_2 = ['peach tree', 'avocado tree',  'apple tree', 'cherry tree', 'mango tree', 'pear tree', 'soursop tree', 'dev']
+Choice_2_lower = Choice_2.lower() #Forces the user input to be in all lower case 
+if Choice_2_lower in Verify_2: #Makes sure that the input is in the list
+    print('You have chosen:', Choice_2)
+else:
+    print('Tree not found in provided list, please try again')
+    end2 = input('Press enter to exit code\n')
+    quit()
+
+#------------------------Getting the City's Information------------------------
+City_file = open('69826_6420573_5414951.txt', 'r', encoding=""cp1252"") #Open cities.txt file 
+
+
+City_lines = []
+New_line = ['city', 'zone', 'temp', 'rain'] 
+city = ['city']
+City_choice = []
+Zone = ['Zone']
+temp = ['temp']
+# Here I created a bunch of new list to use in future code 
+
+
+City_lines = City_file.readlines()
+
+City_val = 0
+for line in City_lines:
+    City_line = line.split()
+    City = City_line[0:1]
+    City = [city.replace(""-"", "" "") for city in City]
+    City_str = ''.join(City)
+    City_lower = City_str.lower()
+    if Choice_1_lower in City_lower:
+        City_choice = City[0:1]
+        City_Zone = City_line[1:2]
+        City_rain = City_line[2:3]
+        City_val = 1
+
+if City_val == 0:
+    print('system error occurred, please try again') #Just in case for some reason the previous for and if loop dont work 
+    end3 = input('Press enter to exit code\n')
+    quit()
+    
+City_file.close()#Close City_file since its not needed anymore 
+City_str = ''.join(City_choice)
+Zone_str = ''.join(City_Zone) # Converts Zone from list into string 
+rain_str = ''.join(City_rain) # Converts rain from list into string
+
+
+print(f""{City_str}'s hardiness zone is {Zone_str}, with an average rainfall of {rain_str}"")
+
+#------------------------------Getting the Fruit tree's information---------------------------------
+Tree_line = []
+
+
+Tree_file = open('69826_6420574_9583031.txt', 'r', encoding=""cp1252"") #Open tree.txt file
+
+tree = [' tree']
+tree = ''.join(tree)
+Tree_lines = Tree_file.readlines()
+Tree_val = 0
+for line in Tree_lines:
+    Tree_line = line.split()
+    fruit = Tree_line[0]
+    fruit = ''.join(fruit)
+    fruit = fruit + tree # Adding 'tree' to make the string 'fruit tree' because when I put in peach tree instead of Peach tree, the code would find that 'tree' in the text file satisfied my code making the valid line ['tree', 'zone', 'rain'] which Tree val wouldn't catch  but Min = int(Fruit_zone[0]) would give me an error since 'zone' isn't an integer
+    fruit_lower = fruit.lower()
+    if fruit_lower in Choice_2_lower:
+        Tree_val = 1
+        Fruit_tree = fruit
+        Fruit_zone = Tree_line[1]
+        Fruit_rain = Tree_line[2]
+
+if Tree_val == 0:
+    print('system error occurred, please try again') #Just in case for some reason the previous for and if loop dont work 
+    end4 = input('Press enter to exit code\n')
+    quit()
+    
+    
+Tree_file.close()#Closing Tree_file 
+
+
+print(f""The {Fruit_tree} tree has a zone range of {Fruit_zone} and an average rainfall of {Fruit_rain} inches"")
+
+
+City_zone = ''.join((x for x in Zone_str if x.isdigit()))#Strips the City's zone of letters, so 8b becomes 8 inorder to calculate range
+City_zone = int(City_zone)
+
+#----------------Hardiness Zone Range Calculator-----------------------------
+Fruit_zone = ''.join(Fruit_zone)#Convert Fruit_zone from list into string 
+Fruit_zone = Fruit_zone.split('-')#Converts Fruit_zone from string to list seperating my lower and upperbound
+Min = int(Fruit_zone[0])
+Max = int(Fruit_zone[1])
+Fruit_range = range(Min, Max)
+
+
+if City_zone in Fruit_range:
+    print(f""{City_str}'s Hardiness Zone of {Zone_str} is in the {Fruit_tree} tree's Hardiness Zone range of {Min}-{Max}"")
+    Zone_val = 2
+else:
+    print(f""{City_str}'s Hardiness Zone is not in the {Fruit_tree} tree's Hardiness Zone range"")
+    Zone_val = -2
+
+
+#---------------------------------------- Average yearly Rainfall-------------------
+
+if rain_str > Fruit_rain:
+    print(f""The {Choice_2} would recieve more than enough rain in {City_str} to supplement itself"")
+    Rain_val = +1
+elif rain_str < Fruit_rain:
+    print(f""The {Choice_2} would not recieve enough rain in {City_str} to supplement itself"")
+    Rain_val = -1
+elif rain_str == Fruit_rain:
+    print(f""The {Choice_2} would exactly enough rain in {City_str} to supplement itself"")
+    Rain_val = +1
+    
+    
+#-------------------------------Final Results--------------------------
+
+total_val = Rain_val + Zone_val 
+if Zone_val and Rain_val >= 0:
+    print(f""{City_str} is a great place for the {Choice_2}, and the {Choice_2} would thrive"")
+elif Zone_val > 0 and Rain_val < 0:
+    print(f""{City_str} is a great place for the {Choice_2}, but the {Choice_2} should be watered reguarly to help it thrive"")
+elif Zone_val and total_val < 0:
+    print(f""The {Choice_2} is not suitable to grow in {City_str} "")
+#-------------------------------Final Question--------------------
+Choice_3 = input('Thank you for participating please type exit to close the program \n')
+Verify_3 = ['exit']
+if Choice_3 is Verify_3:
+    quit()
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+Ask the user question and recommend 3 songs that would be appropriate based on their choice. Will be reading from a csv/database that has a selection of songs. Also have the option of adding songs straight from the script and prevent duplicates.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+developer = ""R""
+import csv
+
+chill = []
+aggressive = []
+dance = []
+hip_hop = []
+with open(""song.csv"", newline='') as file:
+        csvFile = csv.reader(file)
+        data = list(csvFile)
+        for line in data:
+                chill.append(line[0])
+                aggressive.append(line[1])
+                dance.append(line[2])
+                hip_hop.append(line[3])
+#Lists of songs from my playlist
+#extracted from csv file
+
+choices = [""choose"",""get recommendations"",""recommendations"",""playlist""]
+end_options = [""try again"",""check list"",""end""]
+dont = 0
+personal_list = []
+genres = {'chill': chill, 'aggressive': aggressive, 'dance': dance,
+          'hip hop': hip_hop}
+months = ['january','february','march','april','may','june','july','august','september','october','november',
+          'october','november','december']
+#list and dictionaries used in programming
+
+O = 0
+#^^This will determine everything
+
+print (f""Hello user, welcome to my project. \n"")
+#Intro and welcome
+while dont == 0:
+        genre = input(""Please choose a genre from this list by writing its name.\n""
+              ""[Chill     ]\n""
+              ""[Aggressive]\n""
+              ""[Dance     ]\n""
+              ""[Hip Hop   ]"")
+#List of genres 
+
+        while genre.lower() not in genres:
+                print (""That's not a genre here! Try again!"")
+                genre = input(""Choose a genre!"")
+#Checks if they actually chose from list and loops until they get it right!
+    
+        print (f""You have chosen the {genre} genre!"")
+        choice = input(f""Would you like to choose from the playlist or get recommendations?"")
+        choice = choice.lower()
+        while choice not in choices:
+                print (""Not a option!"")
+                choice = input(f""Would you like to choose from the playlist or get recommendations?"")
+                choice = choice.lower()
+        if choice == ""choose"" or choice == ""playlist"":
+            dont = 1
+            while dont == 1: 
+                print (genres[genre.lower()])
+                chosen = input(""Write the name of the song to put it in your list!"")
+                while chosen not in genres[genre.lower()]:
+                        print (""Make sure it looks the same as its written!"")
+                        chosen = input(""Write the name of the song to put it in your list!"")
+                if chosen not in personal_list:
+                        personal_list.append(chosen)
+                print (""Done!"")
+                choice2 = input(""Add another or stop?"")
+                choice2 = choice2.lower()
+                if choice2 == (""add another""):     
+                        dont == 1
+                        continue
+                elif choice2 == (""stop""):
+                        break
+                break
+#Huge code for when they want to choose directly from the chosen playlist
+
+        elif choice == ""get recommendations"" or choice == ""recommendations"":
+                dont = 0
+        while dont == 0:    
+                month = input(""Now what month were you born in?"")
+
+                while month.lower() not in months: 
+                    print (f""Not a month! Try again!"")
+                    month = input(""Now what month were you born in?"")
+                print (""That's a month!"")
+#makes sure they actually input a month, otherwise it loops until they do!
+
+                O = ((len(month) + len(genre)) - 10)
+                if O < 0:
+                    O = 0
+                elif O > 12:
+                    O = 12
+#Will make sure number generated for recommendations doesn't fall out of indexes
+                    
+                final_song = genres[genre.lower()][O]
+                final_song2 = genres[genre.lower()][O-1]
+                final_song3 = genres[genre.lower()][O-2]
+                for i in range(3):
+                    if (genres[genre.lower()][O-i]) not in personal_list:
+                        personal_list.append(genres[genre.lower()][O-i])
+#give 2 more songs closely connected to original
+
+                print (f""You chose the {genre} genre and were born in {month}, \n""
+                       f""here's some songs! : {final_song}, {final_song2}, and {final_song3}\n"")
+                break
+#final result for recommendations
+        
+        dont = 1
+        while dont == 1:
+            ending = input(""Try again,check list,get text file or end?"")
+            ending = ending.lower()
+            if ending == (""try again""):
+                dont = 0
+            elif ending == (""check list""):
+                dont = 1
+                print (personal_list)
+            elif ending == (""get text file""):
+                dont= 1
+                with open('userslist.txt', 'w+') as file:
+                        for item in personal_list:
+                                file.write(f""{item}\n"")
+                        file.seek(0)
+                        file_stuff = file.read()
+                        print (file_stuff)
+                        file.close
+            elif ending == (""end""):
+                dont = 2
+                quit
+#end of code where the user can choose a variety of things to do
+#such as
+#       -trying again for either more songs or perhaps use the other option at the start
+#       -checking their list which is made up of their songs
+#       -getting a text file based on the list
+#       -or just ending the code so they don't have to kill it
+</code>
+
+### Response:"
+"### Instruction: You are a diligent grading assistant for a Computer Science teacher. Your task is to read and analyze the Python code between <code> and </code> tags. Evaluate the code according to the criteria provided between <criteria> and </criteria> tags. Before evaluating, carefully review the CodeDescription provided between <description> and </description> tags to understand the purpose and context of the project. For each criterion, always assess the logic of the code, even if it does not run or contains errors, and provide both a score and detailed feedback explaining the reason for that score. After addressing all criteria, conclude by listing all individual scores in a summary. Ensure your feedback is thorough and covers any key points or potential improvements relevant to each criterion.
+
+### CodeDescription: 
+<description>
+User chooses a fast food restaurant of their choice. Then searches through csv and displays their menu. The user chooses what they want to order based on the menu and displays their total when finished.
+</description>
+
+### Criteria_1:
+<criteria>
+Description: Does the code contain branching statements and loops (as needed)? Branching using if-else and loops for repetitive execution of tasks are two of the most central elements of any Python code. So, all project code submissions must contain at least one if statement and one for / while statement.	
+- 15 pts: Full points If the criteria is satisfied.
+-10 pts: Partial points If the code contains only one of the two required components (if OR for/while)
+-0 pts: No points
+</criteria>
+
+### Criteria_2:
+<criteria>
+Description: Does the Python code contain functions to create modular code? Functions are important to create modular tasks to reduce the redundancy in the code and for independent testing.	
+- 10 pts: Full points If the code contains at least one function that is properly formatted and makes sense for the project.	
+- 5 pts: Partial points If the code contains improper use of functions (or modular code is clear from files or other means).
+- 0 pts: No points		
+</criteria>
+
+### Criteria_3:
+<criteria>
+Description: Data structures: Does the code use data structures as appropriate? Data structures discussed in the course are: strings, lists, and dictionaries. Grade whether the data structure that the code used is appropriate for that application. That is, if something has a key and a value, a dictionary is more appropriate than managing two lists. Similarly, if many variables are created instead of using a list, then it's improper code writing.
+- 5 pts: Full points
+- 0: pts No points
+</criteria>
+
+### Criteria_4:
+<criteria>
+Description: Does the code use files for reading or writing or any other advanced feature? If files are not applicable for the project, this criteria may be satisfied by graph generation, modules, python files, or other advanced features too.	
+- 10 pts: Full points If file reading or other alternative advanced feature (like multiple modules, graphing, data analysis) is used appropriately in the code.
+- 5 pts: Partial points Attempted to use files or other advanced feature but improper use/did not succeed fully.
+- 0 pts: No points	
+</criteria>
+
+### Criteria_5:
+<criteria>
+Description: Is the code properly documented? Comments on key lines in the code and/or docstrings for functions.
+- 5 pts: Full points if at least 5 commented lines or other text is present in the code
+- 0 pts: No points If no comments or docstrings are provided.	
+</criteria>
+
+### Criteria_6:
+<criteria>
+Description: Did the code demonstrate most of the proposed features as written in the project ideas document? If most of the features are not demonstrated, check whether other equivalent (or new) features were implemented.	
+- 25 pts: Full points If most of the features are successfully demonstrated (as seen from the code and its execution)
+- 20 pts: Almost all features Almost all of the features for the project are demonstrated successfully.
+- 15 pts: Half partial points Half of the proposed features are demonstrated successfully or some features are incorrectly implemented. The code implements a very basic set of features of the project.
+- 10 pts: Partial points If only one feature is implemented and/or project is not significant work.
+- 0 pts: No Marks
+</criteria>
+
+### Criteria_7:
+<criteria>
+Description: User-friendly interface Does the code create an interface for the user that is easy to use and friendly.	
+- 10 pts: Full points
+- 5 pts: Partial points If some user-messages are unhelpful
+- 0 pts: No Marks
+</criteria>
+
+### MainPythonFileCode
+<code>
+# Fast Food Restaurant Ordering Simulator
+
+# Dictionary to store the menu for each restaurant
+menu = {
+    ""McDonald's"": {
+        ""Big Mac"": 5.99,
+        ""Fries"": 2.49,
+        ""Chicken McNuggets"": 4.99
+    },
+    ""Burger King"": {
+        ""Whopper"": 6.49,
+        ""Onion Rings"": 2.99,
+        ""Chicken Sandwich"": 5.99
+    },
+    ""KFC"": {
+        ""Original Recipe Chicken"": 7.99,
+        ""Mashed Potatoes"": 2.49,
+        ""Cole Slaw"": 1.99
+    },
+    ""Pizza Hut"": {
+        ""Pepperoni Pizza"": 8.99,
+        ""Garlic Knots"": 3.49,
+        ""Hawaiian Pizza"": 9.99
+    }
+}
+
+# Function to display the menu for a restaurant
+def display_menu(restaurant):
+    print(f""\nMenu for {restaurant}:"")
+    for item, price in menu[restaurant].items():
+        print(f""{item}: ${price:.2f}"")
+
+# Function to take an order and calculate the total
+def take_order(restaurant):
+    order = {}
+    total = 0
+
+    while True:
+        print(""\nEnter the number of the item you want to order (0 to finish ordering):"")
+        for i, item in enumerate(menu[restaurant], start=1):
+            print(f""{i}. {item}"")
+        
+        item_choice = int(input())
+        
+        if item_choice == 0:
+            break
+        
+        if 1 <= item_choice <= len(menu[restaurant]):
+            selected_item = list(menu[restaurant].keys())[item_choice - 1]
+            item_price = menu[restaurant][selected_item]
+            order[selected_item] = item_price
+            total += item_price
+            print(f""{selected_item} added to your order."")
+
+    return order, total
+
+# Function to calculate change
+def calculate_change(total, amount_paid):
+    return amount_paid - total
+
+# Main function to run the program
+def main():
+    print(""Welcome to the Fast Food Ordering Simulator!"")
+
+    while True:
+        print(""\nPlease choose a fast food restaurant:"")
+        for i, restaurant in enumerate(menu.keys(), start=1):
+            print(f""{i}. {restaurant}"")
+        print(""0. Quit"")
+
+        try:
+            restaurant_choice = int(input(""Enter the number of your chosen restaurant: ""))
+            
+            if restaurant_choice == 0:
+                break
+            
+            if 1 <= restaurant_choice <= len(menu):
+                chosen_restaurant = list(menu.keys())[restaurant_choice - 1]
+                print(f""You have chosen {chosen_restaurant}."")
+                display_menu(chosen_restaurant)
+                order, total = take_order(chosen_restaurant)
+
+                print(""\nYour order:"")
+                for item, price in order.items():
+                    print(f""{item}: ${price:.2f}"")
+                print(f""Total: ${total:.2f}"")
+
+                # Prompt the user for the amount paid and calculate change
+                amount_paid = float(input(""Enter the amount paid: $""))
+                change = calculate_change(total, amount_paid)
+                print(f""Change: ${change:.2f}"")
+            
+            else:
+                print(""Invalid choice. Please select a valid restaurant number."")
+        except ValueError:
+            print(""Invalid input. Please enter a valid number."")
+
+    print(""Thank you for using the Fast Food Ordering Simulator!"")
+
+if __name__ == ""__main__"":
+    main()
+</code>
+
+### Response:"

@@ -1,0 +1,6 @@
+
+              The Force value of gold is -90.0.
+              The tensile strain of gold is 0.9.
+              print(f'The shear strain of gold is 0.9.
+              print(f'the shear modulus of gold is -1.0.
+              

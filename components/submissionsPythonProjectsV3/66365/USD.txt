@@ -1,0 +1,10 @@
+The Exchange rate for 1 US Dollar
+EUR	0.95
+JPY	149.56
+GBP	0.82
+CHF	0.90
+AUD	1.59
+CAD	1.37
+HKD	7.82
+MXN	18.09
+NZD	1.70

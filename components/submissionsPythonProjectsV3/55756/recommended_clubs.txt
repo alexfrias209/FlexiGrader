@@ -1,0 +1,1 @@
+[{"name": "Art Club", "description": "Unleash your creativity through painting, drawing, and various art forms."}]

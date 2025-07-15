@@ -1,0 +1,8 @@
+What is used to observe the computers output?    A:GPU B:Monitor C:HDMI   D:Displayport
+what is used to operate the computer?    A:Keyboard    B:headphones  C:mouse D:phone
+What is used to generate graphics output?    A:CPU B:Motherboard C:GPU D:RAM
+what is used to execute instructions of a computer program, such as arithmetic, logic, controlling, and input/output operations? A:Motherboard B:RAM C:CPU D:powersupply 
+what is the circuit board containing the principal components of a computer? A:GPU B:Motherboard C:Monitor D:phone
+What is used to store working data and machine code in a computer?   A:CPU B:GPU C:Motherboard D:RAM
+what is a computer device that stores and retrieves information? A:CPU B:RAM C:Storage device  D:Monitor
+what is used to transfer GPU data?   A:HDMI    B:CPU C:WIFI card   D:Mini USB

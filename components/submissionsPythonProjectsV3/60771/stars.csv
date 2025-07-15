@@ -1,0 +1,143 @@
+Constellation,Name,Meaning,Designation,Spectral,Radius,Mass,Temperature,Distance,Age,Apparent,Absolute,Luminosity,Color,Class
+Andromeda,Alpheratz,Head of the Woman in Chains,Alpha Andromedae,B8 IV,2.7,3.8,"13,800",92,60,2.06,-0.31,240,Blue,Subgiant
+Andromeda,Mirach,Backside (of Andromeda),Beta Andromedae,M0 III,100,2.49,"3,842",197.3,378,2.05,-1.84,"1,995",Red,Giant
+Andromeda,Almach,Caracal,Gamma Andromedae,K2 IIb,80,23.7,"4,250",392.8,6.5,2.27,-3.23,"2,000",Orange,Giant
+Andromeda,,,Delta Andromedae,K3 III,13.6,1.3,"4,315",105.5,3200,3.28,0.72,68,Orange,Giant
+Andromeda,Titawin,,Upsilon Andromedae,F8 V,1.48,1.27,"6,213",44,3120,4.1,3.44,3.57,Yellow-White,Main-sequence Dwarf
+Andromeda,,,Iota Andromeda,B8 V,4.6,3.1,"12,620",500,116,4.29,1.63,638,Blue,Main-sequence Dwarf
+Aquarius,Sadalmelik,Luck of the King,Alpha Aquarii,G2 Ib,52.89,5.13,"5,383",520,53,2.942,-3.88,"2,120",Yellow,Supergiant
+Aquarius,Sadalsuud,Luck of Lucks,Beta Aquarii,G0 Ib,47.88,4.97,"5,608",550,110,2.87,-3.04,"2,046",Yellow,Supergiant
+Aquarius,Sadachbia,Luck of the Homes,Gamma Aquarii,A0 V,1.8,2.49,"10,637",164,158,3.849,0.1,"1,980",White,Main-sequence Dwarf
+Aquarius,Skat,Shin,Delta Aquarii,A3 V,2.4,3,"8,650",113,300,3.28,-0.17,48,White,Main-sequence Dwarf
+Aquarius,Albali,The Swallower,Epsilon Aquarii,A1 V,2.5,2.98,"9,622",208,388,3.77,-0.46,138,White,Main-sequence Dwarf
+Aquila,Altair,The Flying Eagle,Alpha Aquilae,A7 V,1.57,1.86,"6,860",16.73,100,0.76,2.22,10.6,White,Main-sequence Dwarf
+Aquila,Alshain,The Falcon,Beta Aquilae,G9.5 V,3.064,1.26,"5,701",44.7,10.5,3.87,3.03,5.6,Yellow,Main-sequence Dwarf
+Aquila,Tarazed,The Beam of the Scale,Gamma Aquilae,K3 II ,91.81,3.51,"4,098",395,270,2.712,-3.38,"2,146",Orange,Giant
+Aquila,Okab,Eagle's Tail,Zeta Aquilae,A0 V,2.27,2.37,"9,620",83,100,2.983,0.96,39.4,White,Main-sequence Dwarf
+Aries,Hamal,Head of the Ram,Alpha Arietis,K1 IIIb,14.9,1.5,"4,480",65.8,3400,2,0.47,91,Orange,Giant
+Aries,Mesarthim,Servant,Gamma Arietis,A0 V,2.014,2.67,"10,356",164,34,3.86,-1.28,42,White,Main-sequence Dwarf
+Aries,Sheratan,The Two Signs,Beta Arietis,A5 V,4.62,2.34,"9,000",59.6,300,2.655,1.55,23,White,Main-sequence Dwarf
+Auriga,Capella,Little Goat,Alpha Aurigae,K0 III,11.98,2.56,"4,970",42.9,620,0.08,0.29,78.7,Orange,Giant
+Auriga,Menkalinan,Shoulder of the charioteer,Beta Aurigae,A1 IV,2.77,2.38,"9,350",81.1,570,1.93,0.55,55,White,Subgiant
+Bootes,Arcturus,The Herdsman,Alpha Boötis,K2 III,25.4,1.08,"4,286",36.7,7100,-0.05,-0.3,170,Orange,Giant
+Bootes,Alkalurops,The herdsman's staff,Mu Boötis,F2 IV,1.9,1.6,"7,000",119.85,600,7.63,1.47,20,Yellow-White,Subgiant
+Bootes,Izar,Loins,Epsilon Boötis,K0 III,33,4.6,"4,550",236,37.4,2.37,-1.61,501,Orange,Giant
+Cancer,Asellus Australis,Southern Donkey Colt,Delta Cancri,K0 III,11,1.71,"4,637",131,2450,3.94,0.84,52,Orange,Giant
+Cancer,,,Iota Cancri,G8 III,21,3.43,"4,954",330,263,6.57,-0.79,204,Yellow,Giant
+Cancer,Copernicus,,55 Cancri,K0 IV,0.943,0.905,"5,172",40.95,8600,5.95,5.5,0.58,Orange,Subgiant
+Cancer,Acubens,The Claws,Alpha Cancri,A7 V,3.43,2.1,"7,943",178,10,4.2,0.46,50.55,White,Main-sequence Dwarf
+Canis Major,Sirius,Dog,Alpha Canis Majoris,A0 V,1.711,2.063,"9,940",8.7,252,-1.46,1.43,25.4,White,Main-sequence Dwarf
+Canis Major,Mirzam,The Herald,Beta Canis Majoris,B1 II,9.7,13.5,"25,000",490,12.4,1.98,-4.1,"26,600",Blue,Giant
+Canis Major,Adhara,Virgins,Epsilon Canis Majoris,B2 III,13.9,12.6,"22,900",430,22.5,1.5,-4.8,"38,700",Blue,Giant
+Canis Major,,,VY Canis Majoris,M4 I,"2,069",17,"3,490","3,820",8.2,7.95,-9.4,"270,000",Red,Supergiant
+Canis Minor,Procyon,Before the Dog,Alpha Canis Minoris,F5 IV,2.04,1.5,"6,530",11.46,1870,0.34,2.66,6.93,Yellow-White,Subgiant
+Canis Minor,Gomeisa,The Bleary-Eyed Woman,Beta Canis Minoris,B8 V,3.5,3.5,"11,772",160,160,2.84,-0.59,195,Blue,Main-sequence Dwarf
+Canis Minor,,,Gamma Canis Minoris,K3 III,36.8,1.88,"4,036",320,1300,4.33,-0.5,321,Orange,Giant
+Canis Minor,,,Epsilon Canis Minoris,G7 II,45.51,4.63,"4,916",770,140,5,-2.62,"1,086",Yellow,Giant
+Capricornus,Algiedi Prima,,Alpha Capricorni,G3 I,36.3,5.3,"5,119",870,700,4.27,-1.9,"1,047",Yellow,Supergiant
+Capricornus,(Deneb) Algedi ,Tail,Delta Capricorni,A7 III,1.91,2,"7,301",38.7,6.5,2.81,2.48,8.5,White,Giant
+Capricornus,Nashira,Bearer of Good News,Gamma Capricorni,F0 III,2.35,2.44,"7,520",157,79.4,3.67,2.6,42,Yellow-White,Giant
+Carina,Canopus,Golden Earth,Alpha Carinae,A9 II,73.3,10.1,"7,400",310,25.1,-0.74,-5.71,"10,700",White,Giant
+Carina,Miaplacidus,,Beta Carinae,A1 III,6.8,3.5,"8,866",113.2,260,1.69,-1.03,288,White,Giant
+Carina,,,Eta Carinae,LBV,240,100,"37,200","7,500",3,4.3,-8.3,"4,600,000",Blue,Hypergiant
+Cassiopeia,Schedar,Placid waters,Alpha Cassiopeiae,K0 III,45.39,3.98,4552,228,220,2.24,-2.01,794,Orange,Giant
+Cassiopeia,,,Beta Cassiopeiae,F2 III,3.56,1.91,"7,079",54.7,1130,2.28,1.3,27.3,Yellow-White,Giant
+Cassiopeia,Navi,,Gamma Cassiopeiae,B1 IV,10,13,"25,000",550,8,2.47,-3.98,"34,000",Blue,Subgiant
+Centaurus,Rigil Kentaurus,Foot of the Centaur,Alpha Centauri,G2 V,1.2,1.07,"5,790",4.34,4850,1.33,4.38,1.5,Yellow,Main-sequence Dwarf
+Centaurus,Hadar,To Be Present,Beta Centarui,B1 III,9,12.02,"26,000",390,14.1,0.61,-4.9,"66,100",Blue,Giant
+Centaurus,,,Proxima Centauri,M6 V,0.15,0.12,"2,992",4.24,4850,10.77,15.6,0.00005,Red,Main-sequence Dwarf
+Cetus,Mira,Wonderful,Omicron Ceti,M7 III,367,1.18,"3,055",300,6,6,0.99,"8,880",Red,Giant
+Cetus,Menkar,Nose of Cetus,Alpha Ceti,M2 III,89,2.3,"3,795",249,70,2.53,-3.2,"1,455",Red,Giant
+Cetus,,,Tau Ceti,G8 V,0.79,0.78,"5,320",11.9,9000,3.5,0.72,0.45,Yellow,Main-sequence Dwarf
+Crux,Acrux,,Alpha Crucis,B0 IV,7.8,17.8,"24,000",320,10.8,0.76,-3.77,"25,000",Blue,Subgiant
+Crux,Mimosa,Flower,Beta Crucis,B0 III,8.4,16,"27,000",280,9.5,1.25,-3.92,"34,000",Blue,Giant
+Crux,Imai,,Delta Crucis,B2 IV,8,8.9,"22,570",345,18.1,2.81,-3.2,"10,000",Blue,Subgiant
+Crux,Ginan,Bag of Songs,Epsilon Crucis,K3 III,28.41,1.52,"4,294",230,2170,3.58,-0.63,302,Orange,Giant
+Cygnus,,,61 Cygni,K5 V,0.66,0.7,"4,526",11.4,6100,5.21,7.5,0.15,Orange,Main-sequence Dwarf
+Cygnus,Deneb,Tail,Alpha Cygni,A2 I,203,19,"8,525","2,615",10,1.25,-8.38,"196,000",White,Supergiant
+Cygnus,,,Kepler-11,G6 V,1.02,1.04,"5,836","2,150",3200,14.2,4.7,1.045,Yellow,Main-sequence Dwarf
+Dorado,,,Alpha Doradus,A0 III,3.5,3.33,"11,588",169,181,3.27,-0.3,195,White,Giant
+Dorado,HD 29712,,R Doradus,M8 III,298,0.7,"2,710",178,1000,5.4,1.71,"4,350",Red,Giant
+Dorado,S Dor,,S Doradus,LBV,380,38,"8,500","169,000",30,10.05,-10,"910,000",Blue-White-Yellow,Hypergiant
+Dorado,R136a1,,RMC 136a1,WN5,42.7,204,44875,"163,000",1.17,12.23,-8.18,"4,677,000",Wolf Rayet,Hypergiant
+Draco,Thuban,Large Snake,Alpha Draconis,A0 IV,4.93,3.18,"10,225",303,280,3.67,-1.2,240,White,Subgiant
+Draco,Rastaban,Head of the Dragon,Beta Draconis,G2 I,40,6,"5,160",380,65,2.79,-2.45,996,Yellow,Supergiant
+Draco,Athebyne,The Wolves,Eta Draconis,G8 III,11,2.55,"5,055",92.1,550,2.73,0.58,60,Yellow,Giant
+Eridanus,Achernar,River's End,Alpha Eridani,B3 V,7.97,6,"14,898",139,63,0.43,-1.46,"3,493",Blue,Main-sequence Dwarf
+Eridanus,Cursa,Footstool,Beta Eridani,A3 III,2.4,2,"8,360",90,460,2.79,0.59,25,White,Giant
+Eridanus,Acamar,The End of the River,Theta Eridani,A3 IV,2.7,1.95,"8,293",167,150,3.18,-0.59,37,White,Subgiant
+Eridanus,Ran,,Epsilon Eridani,K2 V,0.73,0.82,"5,084",10.47,600,3.73,6.19,0.34,Orange,Main-sequence Dwarf
+Gemini,Pollux,Heavenly Twin,Beta Geminorium,K0 III,9.06,1.91,"4,586",33.78,724,1.14,1.08,32.7,Orange,Giant
+Gemini,Castor,Heavenly Twin,Alpha Geminorium,A1 V,2.08,2.37,"10,286",49.24,290,1.93,0.98,0.07,White,Main-sequence Dwarf
+Gemini,Alhena,A ring,Gamma Geminorium,A1 IV,3.3,2.81,"9,260",109,127,1.91,-0.68,123,White,Subgiant
+Gemini,,,Tau Geminorium,K2 III,26.8,2.3,"4,388",321,1220,4.42,-0.56,224,Orange,Giant
+Grus,Alnair,The Bright One,Alpha Gruis,B6 V,3.4,4,"13,920",101,100,1.74,-0.72,520,Blue,Main-sequence Dwarf
+Grus,Tiaki,,Beta Gruis,M5 III,180,2.4,"3,480",177,78,2.14,-1.61,"2,500",Red,Giant
+Hercules,Rasalgethi,Head of the Kneeler,Alpha Herculis,M5 Ib,283.5,2.5,"3,260",360,390,5.32,-2.3,"8,288",Red,Supergiant
+Hydra,Alphard,The Individual,Alpha Hydrae,K3 III,50.5,3.03,"4,120",177,42,2,-1.69,780,Orange,Giant
+Hydra,Minchir,The Nostril of the Brave One,Sigma Hydrae,K2 III,27.6,3.07,"4,491",370,430,4.48,-0.84,295,Orange,Giant
+Hydrus,,,Alpha Hydri,F0 IV,3.04,2,"7,087",71.8,810,2.9,1.15,21,Yellow-White,Subgiant
+Indus,Pe Sze,The Persian,Alpha Indi,K0 III,12,2,"4,893",98.3,1000,3.11,0.65,16,Orange,Giant
+Indus,,,Epsilon Indi,K5 V,0.71,0.75,"4,649",12.05,3500,4.83,6.89,0.21,Orange,Main-sequence Dwarf
+Leo,Regulus,Prince,Alpha Leonis,B8 IV,4.35,3.8,"11,668",79.02,900,1.4,-0.57,316.2,Blue,Subgiant
+Leo,Denebola,Tail of the Lion,Beta Leonis,A3 V,1.72,1.78,"8,500",35.9,240,2.14,1.93,15,White,Main-sequence Dwarf
+Leo,Zosma,Lion's Mane,Delta Leonis,A4 V,2.14,2.2,"8,296",54.8,670,2.56,1.29,15.5,White,Main-sequence Dwarf
+Libra,Zubeneschamali,The Northern Claw,Beta Librae,B8 V,4.9,3.5,"12,500",185,90,2.61,-1.16,130,Blue,Main-sequence Dwarf
+Libra,Zubenelhakrabi,The Claws of the Scorpion,Gamma Librae,G9 III,11.14,1.15,"4,826",163,4310,3.91,-1.59,72,Yellow,Giant
+Lupus,,,Alpha Lupus,B2 III,10,10.1,"21,820",460,18,2.3,-4.3,"25,000",Blue,Giant
+Lupus,Kekouan,Imperial Guards,Beta Lupus,B2 III,6.6,8.8,"24,090",383,24.6,2.68,-3.3,"10,000",Blue,Giant
+Lyra,Vega,Falling,Alpha Lyrae,A0 V,2.362,2.135,"9,602",25.04,455,0.026,0.582,40.12,White,Main-sequence Dwarf
+Lyra,Sheliak,Tortoise,Beta Lyrae,B7 II,15.2,2.97,"13,300","1,080",23,3.52,-3.82,"6,500",Blue,Giant
+Lyra,Sulafat,Turtle,Gamma Lyrae,B9 III,15.4,5.76,"10,000",620,163,3.26,-3.14,"2,430",Blue,Subgiant
+Lyra,,,Zeta Lyrae,A5 V,2.5,2.36,"7,914",156,500,4.37,0.94,31,White,Main-sequence Dwarf
+Ophiuchus,Barnard's Star,,Proxima Ophiuchi,M4 V,0.187,0.161,"3,223",5.962,10000,9.511,13.21,0.0004,Red,Main-sequence Dwarf
+Ophiuchus,Rasalhague,The Head of the Serpent Collector,Alpha Ophiuchi,A5 III,2.6,2.4,"7,965",48.6,770,2.07,1.24,25.4,White,Giant
+Ophiuchus,Cebalrai,The Shepherd's Dog,Beta Ophiuchi,K2 III,12.42,1.13,"4,467",81.8,3820,2.74,0.77,63.4,Orange,Giant
+Ophiuchus,,,Zeta Ophiuchi,O9.5 V,8.5,20.2,"34,300",366,3,2.57,-4.2,"74,100",Purple,Main-sequence
+Orion,Betelgeuse,The Hand of Orion,Alpha Orionis,M1 I,919.5,17.75,"3,600",589,8.25,0.5,-5.85,"96,400",Red,Supergiant
+Orion,Rigel,Left Leg of the Giant,Beta Orionis,B8 I,78.9,21,"12,100",863,8,0.13,-7.84,"120,000",Blue,Supergiant
+Orion,Bellatrix,Female Warrior,Gamma Orionis,B2 IV,5.75,7.7,"21,800",250,25.2,1.64,-2.78,"9,211",Blue,Subgiant
+Orion,Mintaka,Belt,Delta Orionis,O9 II,16.5,24,"29,500","1,240",12,2.23,-5.8,"190,000",Purple,Giant
+Orion,Alnilam,String of pearls,Epsilon Orionis,B0 I,42,64.5,"27,000","2,000",5.7,1.69,-6.89,"832,000",Blue,Extremely Luminous Supergiant
+Orion,Alnitak,The girdle,Zeta Orionis,O9 I,20,33,"29,500","1,260",6.4,1.77,-6,"250,000",Purple,Extremely Luminous Supergiant
+Orion,Saiph,Saif of the Giant,Kappa Orionis,B0 Ia,22.2,15.5,"26,500",650,11.1,2.09,-6.1,"56,881",Blue,Extremely Luminous Supergiant
+Pegasus,Enif,Nose,Epsilon Pegasi,K2 I,211,7.26,"9,807",690,20,2.39,-4.14,"3,895",Orange,Supergiant
+Pegasus,Algenib,The Side,Gamma Pegasi,B2 IV,4.8,8.9,"21,179",470,18.7,2.84,-2.64,"5,840",Blue,Subgiant
+Pegasus,Helvetios,Helvetian,51 Pegasi,G2 IV,1.23,1.12,"5,768",50.64,6100,5.49,4.48,1.36,Yellow,Subgiant
+Perseus,Mirfak,Elbow,Alpha Persei,F5 I,68,8.5,"6,350",510,41,1.8,-5.1,"5,400",Yellow-White,Supergiant
+Perseus,Algol,Demon Star,Beta Persei,B8 V,2.73,3.17,"13,000",90,570,2.12,-0.07,182,Blue,Main-sequence Dwarf
+Phoenix,Ankaa,Phoenix,Alpha Phoenicis,K0 III,15,1.57,"4,436",82,620,2.37,0.52,83,Orange,Giant
+Pisces,,,Alpha Piscium,A0 IV,2.45,2.55,"10,233",151,337,3.82,0.5,58,White,Subgiant
+Pisces,,,Gamma Piscium,G8 III,11.28,1.11,"4,833",138,4.58,3.69,0.68,62.7,Yellow,Giant
+Sagittarius,Nunki,,Sigma Sagittarii,B2 V,4.5,7.8,"18,890",228,31.4,2.05,-2.17,"3,300",Blue,Main-sequence Dwarf
+Sagittarius,Pistol Star,,V4998 Sagittarii,LBV,420,125,"11,900",25114,4,28,-10.75,"3,300,000",Blue,Hypergiant
+Scorpius,Antares,Rival of Mars,Alpha Scorpii,M1 I,680,12.65,"3,660",550,15,1.1,-5.28,97700,Red,Supergiant
+Scorpius,Shaula,The Raised Tail,Lambda Scorpii,B1 IV,8.8,10.4,"25,000",570,78,1.62,-3.7,"36,300",Blue,Subgiant
+Scorpius,Sargas,Arrowhead,Theta Scorpii,F0 II,26.3,3.1,"6,294",329,258,1.84,-2.71,"1,400",Yellow-White,Giant
+Taurus,Aldebaran,The Follower,Alpha Tauri,K5 III,45.1,1.16,"3,900",65.3,6400,0.86,-0.64,439,Orange,Giant
+Taurus,Alcyone,Kingfisher,Eta Tauri,B5 III,9.3,5.9,"12,258",443.5,70,2.87,-2.62,"2,030",Blue,Giant
+Taurus,Electra,Radiant,17 Tauri,B6 III,6.05,4.6,"13,484",400,115,3.7,-1.77,940,Blue,Giant
+Taurus,Maia,Mother,20 Tauri,B8 III,3.59,3.77,"12,300",380,126,3.87,-1.54,501,Blue,Giant
+Taurus,Atlas,To Carry,27 Tauri,B8 III,7.9,4.74,"13,446",431,198,3.63,-1.82,439,Blue,Giant
+Taurus,Merope,Bee-eater Bird,23 Tauri,B6 IV,7.7,4.25,"12,550",460,212,4.18,-1.29,927,Blue,Subgiant
+Taurus,Taygeta,,19 Tauri,B6 IV,5.02,4.5,"14,146",440,210,4.3,-2.02,600,Blue,Subgiant
+Taurus,Pleione,To Increase,28 Tauri,B8 V,3.7,2.88,"11,058",450,125,5.13,-0.34,184,Blue,Main-sequence Dwarf
+Taurus,Celaeno,Black,16 Tauri,B7 IV,4.4,4,"12,800",430,152,5.44,-0.76,344,Blue,Subgiant
+Taurus,Asterope,Lightning,21 Tauri,B8 V,2.22,3.51,"11,041",431,100,5.76,0.34,102,Blue,Main-sequence Dwarf
+Telescopium,,,Alpha Telescopium,B3 IV,3.3,5.2,"16,700",278,24.1,3.51,-1.25,794,Blue,Subgiant
+Triangulum,,,Alpha Triangulum,F5 III,3.22,1.7,"6,288",63.3,1600,3.42,1.98,47,Yellow-White,Giant
+Triangulum,,,Gamma Triangulum,A1 V,1.96,2.7,"9,440",112.3,300,4.01,1.35,33,White,Main-sequence Dwarf
+Triangulum,,,HD 9446,G5 V,1,1,"5,793",164,2000,8.35,4.76,1.1,Yellow,Main-sequence Dwarf
+Ursa Major,Alioth,Tail of the Sheep,Epsilon Ursae Majoris,A1 III,4.14,2.91,"9,020",82.6,300,1.77,-0.2,102,White,Giant
+Ursa Major,Dubhe,Bear,Alpha Ursae Majoris,K0 III,17.03,3.44,"5,012",123,280,1.79,-1.1,165.1,Orange,Giant
+Ursa Major,Alcor,Faint One,80 Ursae Majoris,A5 V,1.84,1.84,"8,221",81.7,500,3.99,2,14.03,White,Main-sequence Dwarf
+Ursa Major,Mizar,Apron,Zeta Ursae Majoris,A2 V,2.4,2.22,"9,000",82.9,370,2.04,0.32,33.3,White,Main-sequence Dwarf
+Ursa Minor,Polaris,Polar star,Alpha Ursae Minoris,F2 I,37.5,5.4,"6,015",378,56,1.98,-3.6,"1,260",Yellow-White,Supergiant
+Ursa Minor,Kochab,Planet,Beta Ursae Minoris,K4 III,42.06,2.2,"4,030",24.91,900,2.08,-0.83,390,Orange,Giant
+Vela,Regor,Roger,Gamma Velorum,O7 III,17,28.5,"35,000",1236,4.5,1.83,-5.63,"280,000",Purple,Giant
+Vela,Alsephina,The Ship,Delta Velorum,A1 V,2.86,2.43,"9,440",80.6,400,2.19,0.02,67,White,Main-sequence Dwarf
+Vela,Suhail,Even,Lambda Velorum,K4 I,210,7,"3,900",545,31.6,2.21,-3.99,"7,900",Orange,Supergiant
+Virgo,Spica,The Virgin's Ear of Grain,Alpha Virginis,B1 V,7.47,11.43,"25,300",250,12.5,0.97,-3.55,"21,497",Blue,Main-sequence Dwarf
+Virgo,Zavijava,Corner of the Barking Dog,Beta Virginis,F9 V,1.68,1.41,"6,132",35.65,2900,3.6,3.41,3.57,Yellow-White,Main-sequence Dwarf
+Virgo,Kang,Neck,Kappa Virginis,K2 III,25.41,1.46,"4,235",255,9670,4.18,-0.28,229,Orange,Giant
+,The Sun,,Sol,G2 V,1,1,"5,772",0,4600,-26.74,4.83,1,Yellow,Main-sequence Dwarf

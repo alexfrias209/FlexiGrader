@@ -1,0 +1,33 @@
+University      Tuition_&_Fees Food_&_Housing Books_&_Supplies Transportation Personal_Expenses Health_Insurance 
+UC_Berkeley         15602          22402           1274             704           2092               3858
+UC_Davis            16018          18562           1381             681           1561               3036
+UC_Irvine           17357          18639           1550             854           1802               2185            
+UCLA                14478          17148           1574             704           1655               2958    
+UC_Merced           14840          20240           1214             880           1926               2290   
+UC_Riverside        14921          18925           1750             925           1925               2091
+UC_San_Diego        18480          17325           1308             858           1620               2259
+UC_Santa_Barbara    15666          18276           1482             669           1596               3192
+UC_Santa_Cruz       15228          18945           1317             900           1692               3141
+
+
+
+Sources 
+https://financialaid.berkeley.edu/how-aid-works/student-budgets-cost-of-attendance/
+https://www.ucdavis.edu/admissions/cost
+https://www.admissions.uci.edu/afford/index.php
+https://admission.ucla.edu/tuition-aid/tuition-fees
+https://financialaid.ucmerced.edu/cost-attendance
+https://financialaid.ucr.edu/cost#2023-2024-estimated-costs-for-
+https://fas.ucsd.edu/cost-of-attendance/undergraduates/tuition-stability-plan/undergraduates/undergraduates_2023-2024.html
+https://www.finaid.ucsb.edu/docs/default-source/default-document-library/2324-coa.pdf
+https://financialaid.ucsc.edu/cost-to-attend/undergraduate-costs.html
+UC Irvine: $-10059798.0
+UC Merced: $21150
+UC Merced: $21150
+UC Merced: $21150
+UC Merced: $21150
+UC Merced: $21150
+UC Merced: $21150
+UC Merced: $21150
+UC Merced: $21150
+UC Merced: $21150

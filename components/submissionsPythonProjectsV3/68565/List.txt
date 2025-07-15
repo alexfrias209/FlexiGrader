@@ -1,0 +1,26 @@
+Bait #	Bait Type    Bait Name
+1.	Live_Bait    Nightcrawler
+2.	Live_Bait    Redworms
+3.	Live_Bait    Large_Leech
+4.	Live_Bait    Jumbo_Leech
+5.	Live_Bait    Flathead
+6.	Live_Bait    Shad
+7.	Live_Bait    Suckers
+8.	Live_bait    Creek_Chubs
+9.	Live_Bait    Wax_Worms
+10. Live_Bait    Meal_Worms
+11.	Live_Bait    Crickets
+12.	Live_Bait    Grasshoppers
+13.	Artificial_Bait    Wobbler_Swim_Bait
+14.	Artificial_Bait	   Mouse_Like_Soft_Bait
+15.	Artificial_Bait    Replica_Minnow_Bait
+16.	Artificial_Bait	   Lizard_Like_Soft_Bait
+17.	Artificial_Bait    Popper_Fishing_Bait
+18.	Artificial_Bait    Dragonfly_Like_Soft_Bait
+19.	Artificial_Bait    Frog_Like_Soft_Bait
+20.	Artificial_Bait    Shrimp_Like_Soft_Bait
+21. Artificial_Bait    Worm_Like_Soft_Bait    
+22.	Artificial_Bait    CrankBait_Lure
+23.	Artificial_Bait    Spoon_Bait
+24.	Artificial_Bait    Buzz_Bait
+25.	Artificail_Bait    Trolling_Bait

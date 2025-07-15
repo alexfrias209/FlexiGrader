@@ -1,0 +1,8 @@
+Record:
+Date:Current Date
+Car Name:Tesla
+Miles Driven:20000.0
+Charging Rate (kWh/mile):400.0
+Electricity Rate (cost per kWh):30.0
+Charging Cost:48000.0
+

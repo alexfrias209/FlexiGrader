@@ -1,0 +1,5 @@
+Food Order Receipt
+Ordered by: 4
+Ordered Items:
+
+Total Calories: 0 calTotal Price: $0.00

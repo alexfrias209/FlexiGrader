@@ -1,0 +1,23 @@
+Screentime	App#1	App#2	App#3	Day	Week
+2hr,18min	Youtube	Chrome	Discord	Monday	1
+3hr,15min	Chrome	Netflix	Youtibe	Tuesday	1
+7hr,50min	Youtube	Discord	Chrome	Wednesday	1
+10hr,17min	Youtube	Discord	Craigslist	Thursday	1
+9hr,32min	Spotify	Discord	Youtube	Friday	1
+8hr,57min	Youtube	Chrome	Amazon	Saturday	1
+4hr,15min	Youtube	Chrome	Spotify	Sunday	1
+13hr,55min	Youtube	Chrome	Chase	Monday	2
+10hr,16min	Youtube	Chrome	Discord	Tuesday	2
+6hr,17min	Youtube	Discord	Spotify	Wednesday	2
+7hr,21min	Netflix	Discord	Google	Thursday	2
+3hr,50min	Youtube	Google	Messages	Friday	2
+9hr,07min	Youtube	Maps	Chrome	Saturday	2
+8hr,20min	Youtube	Discord	Google	Sunday	2
+7hr,03min	Youtube	Discord	Amazon	Monday	3
+10hr,29min	Youtube	Chrome	Canvas	Tuesday	3
+6hr,24min	Youtube	Spotify	Discord	Wednesday	3
+10hr,12min	Discord	Spotify	Chase	Thursday	3
+7hr,03min	Youtube	Chrome	Canvas	Friday	3
+7hr,30min	Youtube	Chrome	Discord	Saturday	3
+5hr,50min	Chrome	Youtube	Discord	Sunday	3
+8hr,03min	Spotify	House_Wav	Google	Monday	38hr,30min	Youtube	Slack	VSCode	Monday	38hr,30min	Youtube	Slack	VSCode	Monday	38hr,30min	Youtube	Slack	VSCode	Monday	3

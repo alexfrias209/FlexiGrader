@@ -1,0 +1,8 @@
+The flight time with 0.08695652173913043. 
+Safe flight time accounting for fuel consumption is 0.02608695652173913.
+Safe flight fuel usage accounting for fuel consumption is 6.0.
+Fuel remaining after landing: 6.0
+Fuel weight at takeoff: 24.87562189054726
+Fuel weight at landing: 17.412935323383085
+The total takeoff plane weight is 764.8756218905472.
+The total landing plane weight is 757.4129353233831.

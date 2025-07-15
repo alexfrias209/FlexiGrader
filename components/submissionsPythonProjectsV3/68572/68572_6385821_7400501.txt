@@ -1,0 +1,13 @@
+Number of dice: 8
+Number of sides on each die: 4
+Difficulty level: 1
+Score required to win: 32
+Your roll: 24
+Computer roll: 19
+Your Score: 24
+Computer Score: 19
+Your roll: 18
+Computer roll: 18
+Your Score: 42
+Computer Score: 37
+Winner: You

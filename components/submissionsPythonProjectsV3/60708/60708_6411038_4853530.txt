@@ -1,0 +1,5 @@
+Food Order Receipt
+Ordered by: Customer 1
+Ordered Items:
+Sushi         | 93 cal  | $12.00
+Total Calories: 93 calTotal Price: $12.00

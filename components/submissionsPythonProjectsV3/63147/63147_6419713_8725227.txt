@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Developer: Clark Gamboa
+	This project aims to create a full on Fibonacci Sequence through a few methods.
+
+
+	Changes: 
+		10/1/23: 
+			- The start of coding this thing.
+		
+		10/8/23:
+			- Created functions to output the user_options and user_options2 dictionaries (just to make O/I Code look a little cleaner)
+			- HowItWorks() function now utilizes the use of a .txt file insteead of an ungodly amount of print() statements.
+			- Added 2nd generation method option: FS_n_Numbers() function generates "Fn" numbers of Fibonacci numbers 
+		
+		10/15/23: 
+				- ALL the functions for this code are now in a COMPLETELY SEPERATE .py file.
+					(This allows me to test the functions seperately from the main code main code being THIS .py file)
+				- Decided to utilize Try and Except blocks to check if the user input is a numerical value or not. 
+					(Reason: First time using try and except blocks, so really I'm experementing with how they work)
+				- Utilization of python's logging module.
+					(Allows me to check if everything is working smoothly without having to use print() all the time. Especially with the math stuff)
+				- Utilization of python's os module.
+				- New Generation option! Dividing numbers in the Fibonnaci Sequence to create the Golden Ratio!
+				- New Menue Option: Explanation of the Golden Ratio
+				- Another Generation option: Multiplying Phi to create FBS
+
+		10/18/23:
+				- Imported python's time module.
+					(You can now see how long it takes to for the program to generate the sequence)
+				- New Option: "CLEAR LOG FILE"
+					(Option is merely there to clear the log file if it gets too big, as in it gets into the Gigabytes)
+				- Another Try and Except block for OverflowError.
+					(Deals with if the user decides to generate too many numbers the program cant handle.)
+				- Renamed the functions so that their names are more clear to understand.
+				- Moved a few functions back to the main file.
+
+		10/29/23:
+				- The project is practically finished.
+				- Minor Change: Removed 'mymodules' folder and put its contents into the main file.
+					(For easier grading)
+				- Will try to polsih code so its easier to read and understand.  
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------

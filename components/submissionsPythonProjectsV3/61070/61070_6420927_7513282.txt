@@ -1,0 +1,3 @@
+Player score = 0
+CPU 1 score = 0
+CPU 2 score = 0

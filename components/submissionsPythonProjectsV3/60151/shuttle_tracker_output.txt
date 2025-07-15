@@ -1,0 +1,10 @@
+Shuttle information for Bobcat_Express:
+Stop: Merced Station, Departure Time: 11:45 AM
+Stop: Merced College, Departure Time: 12:45 PM
+Stop: Target, Departure Time: 3:15 PM
+Stop: Walmart, Departure Time: 2:30 PM
+Stop: Amtrak, Departure Time: 9:15 AM
+Stop: Downtown Merced, Departure Time: 1:15 PM
+Stop: In n Out, Departure Time: 10:30 AM
+Stop: UC Merced, Departure Time: 8:45 AM
+------------------

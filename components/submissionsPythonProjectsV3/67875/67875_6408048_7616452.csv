@@ -1,0 +1,145 @@
+State/City, Country, price_range, weather, time, people
+Prague,Czech Republic, $500-$1000, cold, one week, one
+Brasov,Romania, $500-$1000, cold, one week, 2
+Krakow,Poland, $500-$1000, cold, one week, 3
+Vilnius,Lithuania, $500-$1000, cold, one week, 4 or more
+Cancun,Mexico, $500-$1000, hot, one week, one
+Bali,Indonesia, $500-$1000, hot, one week, 2
+Marrakech,Morocco, $500-$1000, hot, one week, 3
+Phuket,Thailand, $500-$1000, hot, one week, 4 or more
+Edinburgh,Scotland, $500-$1000, rainy, one week, one
+Vancouver,Canada, $500-$1000, rainy, one week, 2
+Dublin,Ireland, $500-$1000, rainy, one week, 3
+Reykjavik,Iceland, $500-$1000, rainy, one week, 4 or more
+Stockholm,Sweden, $1000-$1500, cold, one week, one
+Harbin,China, $1000-$1500, cold, one week, 2
+Quebec City,Canada, $1000-$1500, cold, one week, 3
+Tromso,Norway, $1000-$1500, cold, one week, 4 or more 
+Dubai,United Arab Emirates, $1000-$1500, hot, one week, one
+Athens,Greece, $1000-$1500, hot, one week, 2
+Lisbon,Portugal, $1000-$1500, hot, one week, 3
+California,United States, $1000-$1500, hot, one week, 4 or more
+Jaco,Costa Rica, $1000-$1500, rainy, one week, one
+Florida,United States, $1000-$1500, rainy, one week, 2
+Muğla,Turkey, $1000-$1500, rainy, one week, 3
+Vík í Mýrdal,Iceland, $1000-$1500, rainy, one week, 4 or more
+Fulhadhoo,Maldives, $1500-$2000, cold, one week, one
+Machu,Picchu, $1500-$2000, cold, one week, 2
+Los Santos,Panama, $1500-$2000, cold, one week, 3
+Suðurnes,Iceland, $1500-$2000, cold, one week, 4 or more
+Hawaii,United States, $1500-$2000, hot, one week, one
+Nevada,United States, $1500-$2000, hot, one week, 2
+Acklins,Bahamas, $1500-$2000, hot, one week, 3
+Bimini,Bahamas, $1500-$2000, hot, one week, 4 or more
+Sichuan Province,China, $1500-$2000, rainy, one week, one
+Hawaii,United States, $1500-$2000, rainy, one week, 2
+Cameroon,Africa, $1500-$2000, rainy, one week, 3
+Bioko Island,Equatorial Guinea, $1500-$2000, rainy, one week, 4 or more
+Alaska,United States, more than $2000, cold, one week, one
+Siberia,Russia, more than $2000, cold, one week, 2
+Yukon,Canada, more than $2000, cold, one week, 3
+Jammu,India, more than $2000, cold, one week, 4 or more
+Central Abaco,Bahamas, more than $2000, hot, one week, one
+Arizona,United States, more than $2000, hot, one week, 2
+Tijuana,Mexico, more than $2000, hot, one week, 3
+Cayo Distrct,Belize, more than $2000, hot, one week, 4 or more
+Cropp River,New Zealand, more than $2000, rainy, one week, one
+Tutendo,Colombia, more than $2000, rainy, one week, 2
+Meghalaya State,India, more than $2000, rainy, one week, 3
+Louisiana,United States, more than $2000, rainy, one week, 4 or more
+Kashmir,India, $500-$1000, cold, one month, one
+Nunavut,Canada, $500-$1000, cold, one month, 2
+North Dakota,United States, $500-$1000, cold, one month, 3
+Vermont,United States, $500-$1000, cold, one month, 4 or more
+Whitsunday Islands,Australia, $500-$1000, hot, one month, one
+Yucatan,Mexico, $500-$1000, hot, one month, 2
+Dubai,United Arab Emirates, $500-$1000, hot, one month, 3
+Rajasthan,India, $500-$1000, hot, one month, 4 or more
+Mississippi,Uniteda States,$500-$1000, rainy, one month, one
+Alabama,United States, $500-$1000, rainy, one month, 2
+Copenhagen,Denmark, $500-$1000, rainy, one month, 3
+Monrovia,Liberia, $500-$1000, rainy, one month, 4 or more
+Wyoming,United States, $1000-$1500, cold, one month, one
+New York,United States, $1000-$1500, cold, one month, 2
+Brussels,Belgium, $1000-$1500, cold, one month, 3
+Ontorio,Canada, $1000-$1500, cold, one month, 4 or more
+Riyadh,Saudi Arabia, $1000-$1500, hot, one month, one
+Cancun,Mexico, $1000-$1500, hot, one month, 2
+Gao,Mali, $1000-$1500, hot, one month, 3
+Mopti,Mali, $1000-$1500, hot, one month, 4 or more
+Copenhagen,Denmark, $1000-$1500, rainy, one month, one
+Podgorica,Montenegro, $1000-$1500, rainy, one month, 2
+Hawaii,United States, $1000-$1500, rainy, one month, 3
+Cayenne,French Guiana,,$1000-$1500, rainy, one month, 4 or more
+Yukutia,Russia, $1500-$2000, cold, one month, one
+El Valle de anton,Panama, $1500-$2000, cold, one month, 2
+Kamchatka,Russia, $1500-$2000, cold, one month, 3
+Alberta,Canada, $1500-$2000, cold, one month, 4 or more
+Segou,Mali, $1500-$2000, hot, one month, one
+Bamako,Mali, $1500-$2000, hot, one month, 2
+Dakar,Senegal, $1500-$2000, hot, one month, 3
+Thies,Senegal, $1500-$2000, hot, one month, 4 or more
+Borongan,Philippines, $1500-$2000, rainy, one month, one
+Bergen,Norway, $1500-$2000, rainy, one month, 2
+New York,United States, $1500-$2000, rainy, one month, 3
+Washington,United States, $1500-$2000, rainy, one month, 4 or more
+Chiriqui,Panama, more than $2000, cold, one month, one
+Gegharkuni,Armenia, more than $2000, cold, one month, 2
+Ontorio,Canada, more than $2000, cold, one month, 3
+Perm,Russia, more than $2000, cold, one month, 4 or more
+San Lorenzo,Puerto Rico, more than $2000, hot, one month, one
+Faversham,Kent, more than $2000, hot, one month, 2
+Coningsby,Lincolnshire, more than $2000, hot, one month, 3
+Pitsford,Northamptonshire, more than $2000, hot, one month, 4 or more
+Borongan,Philippines, more than $2000, rainy, one month, one
+Mawlamyine,Myanmarmore, than $2000, rainy, one month, 2
+Finch-hatton,Australia, more than $2000, rainy, one month, 3
+Taipei,Taiwan, more than $2000, rainy, one month, 4 or more
+Northern Savonia,Finland, $500-$1000, cold, more than one month, one
+North Karelia,Finland, $500-$1000, cold, more than one month, 2
+Ulaanbaatar,Mongolia, $500-$1000, cold, more than one month, 3
+Klinck station,Greenland, $500-$1000, cold, more than one month, 4 or more
+Baja California,Mexico, $500-$1000, hot, more than one month, one
+Queensland,Australia, $500-$1000, hot, more than one month, 2
+Cairns,Australia, $500-$1000, hot, more than one month, 3
+Amazonas,Brazil, $500-$1000, hot, more than one month, 4 or more
+Quibdó,Colombia, $500-$1000, rainy, more than one month, one
+Tutunendo,Colombia, $500-$1000, rainy, more than one month, 2
+Bergen,Norway, $500-$1000, rainy, more than one month, 3
+San Vito,Costa Rica, $500-$1000, rainy, more than one month, 4 or more
+Kainuu,Finland, $1000-$1500, cold, more than one month, one
+Lapland,Finland, $1000-$1500, cold, more than one month, 2
+Omsk,Russia, $1000-$1500, cold, more than one month, 3
+Harju,Estonia, $1000-$1500, cold, more than one month, 4 or more
+Mecca,Saudi Arabia, $1000-$1500, hot, more than one month, one
+Bahia,Brazil, $1000-$1500, hot, more than one month, 2
+Ceara,Brazil, $1000-$1500, hot, more than one month, 3
+Sonora,Mexico, $1000-$1500, hot, more than one month, 4 or more
+Quito,Ecuador, $1000-$1500, rainy, more than one month, one
+Banos,Ecuador, $1000-$1500, rainy, more than one month, 2
+Douala,Cameroon, $1000-$1500, rainy, more than one month, 3
+Buenaventura,Colombia, $1000-$1500, rainy, more than one month, 4 or more
+Labrador,Canada, $1500-$2000, cold, more than one month, one
+Nordland,Norway, $1500-$2000, cold, more than one month, 2
+Troms,Norway, $1500-$2000, cold, more than one month, 3
+Oymyako,Russia, $1500-$2000, cold, more than one month, 4 or more 
+New Mexico,United States, $1500-$2000, hot, more than one month, one
+Texas,United States, $1500-$2000, hot, more than one month, 2
+Rajasthan,India, $1500-$2000, hot, more than one month, 3
+Riyadh,Saudi Arabia, $1500-$2000, hot, more than one month, 4 or more
+Quibdó,Colombia, $1500-$2000, rainy, more than one month, one
+Manizales,Colombia, $1500-$2000, rainy, more than one month, 2
+Sangolqui,Ecuador, $1500-$2000, rainy, more than one month, 3
+San Pedro Sula,Honduras, $1500-$2000, rainy, more than one month, 4 or more
+Akureyri,Iceland, more than $2000, cold, more than one month, one
+Lake Titicaca,Peru, more than $2000, cold, more than one month, 2
+Yellowknife,Canada, more than $2000, cold, more than one month, 3
+Yukon,Canada, more than $2000, cold, more than one month, 4 or more
+San Jose,Costa RIca, more than $2000, hot, more than one month, one
+Baa,Maldives, more than $2000, hot, more than one month, 2
+Berry Islands,Bahamas, more than $2000, hot, more than one month, 3
+Orange Walk District,Belize, more than $2000, hot, more than one month, 4 or more
+Port Antonio,Jamaica, more than $2000, rainy, more than one month, one
+Freeport,Bahamas, more than $2000, rainy, more than one month, 2
+Prince Rupert,Canada, more than $2000, rainy, more than one month, 3
+Mawlamyine,Myanmarmore, than $2000, rainy, more than one month, 4 or more

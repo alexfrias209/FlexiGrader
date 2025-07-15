@@ -1,0 +1,49 @@
+Name,Gender,Scent,Price Range
+Blossom Breeze,1,1,1
+Petal Passion,1,1,2
+Floral Fantasy,1,1,3
+Gardenia Dreams,1,1,4
+Rose Radiance,2,1,1
+Lily Serenity,2,1,2
+Orchid Enchantment,2,1,3
+Tulip Tranquility,2,1,4
+Lavender Elegance,3,1,1
+Jasmine Whisper,3,1,2
+Violet Harmony,3,1,3
+Sunflower Sunshine,3,1,4
+Citrus Zest,1,2,1
+Lemon Lime Delight,1,2,2
+Orange Blossom Bliss,1,2,3
+Grapefruit Spark,1,2,4
+Tangerine Tango,2,2,1
+Lime Squeeze,2,2,2
+Bergamot Breeze,2,2,3
+Clementine Crush,2,2,4
+Mandarin Medley,3,2,1
+Lemon Verbena Fresh,3,2,2
+Lime Citrus Sorbet,3,2,3
+Grapefruit Grove,3,2,4
+Sugar Kiss,1,3,1
+Sweet Dreamscape,1,3,2
+Vanilla Velvet,1,3,2
+Caramel Caress,1,3,4
+Honeyed Whispers,2,3,2
+Marshmallow Embrace,2,3,2
+Almond Delight,2,3,3
+Cotton Candy Cloud,2,3,4
+Gourmet Delight,3,3,1
+Chocolate Temptation,3,3,2
+Butterscotch Serenade,3,3,3
+Maple Syrup Infusion,3,3,4
+Spiced Elegance,1,4,1
+Cardamom Allure,1,4,2
+Cinnamon Spice,1,4,3
+Clove Sensation,1,4,4
+Nutmeg Noir,2,4,1
+Ginger Fusion,2,4,2
+Saffron Seduction,2,4,3
+Peppered Passion,2,4,4
+Chili Heatwave,3,4,1
+Coriander Blaze,3,4,2
+Paprika Pleasure,3,4,3
+Allspice Enchantment,3,4,4

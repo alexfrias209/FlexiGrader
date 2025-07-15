@@ -1,0 +1,201 @@
+The original message was eintagsfliege and the encoded message was DHCFULLIMFXHW
+The starting rotors were set at the postions 0, 0, and 0, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 13, 0, and 0 , which is NOMINAL
+
+* * *
+
+The original message was grauwolf and the encoded message was PMINOVSW
+The starting rotors were set at the postions 2, 3, and 4, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 10, 3, and 4 , which is NOMINAL
+
+* * *
+
+The original message was PMINOVSW and the encoded message was GRAUWOLF
+The starting rotors were set at the postions 2, 3, and 4, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 10, 3, and 4 , which is NOMINAL
+
+* * *
+
+The original message was UZBB and the encoded message was LOWE
+The starting rotors were set at the postions 0, 0, and 0, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 4, 0, and 0 , which is NOMINAL
+
+* * *
+
+The original message was FSENKLK and the encoded message was ALKONST
+The starting rotors were set at the postions 2, 8, and 12, and the switchboard swapped the following letters: 
+
+A:S
+S:A
+[Debug only] During operation, the rotors stepped to the postions 9, 8, and 12 , which is NOMINAL
+
+* * *
+
+The original message was dinergate and the encoded message was MNFUDKHGC
+The starting rotors were set at the postions 4, 1, and 6, and the switchboard swapped the following letters: 
+
+H:K
+K:H
+[Debug only] During operation, the rotors stepped to the postions 13, 1, and 6 , which is NOMINAL
+
+* * *
+
+The original message was MNFUDKHGC and the encoded message was DINERGATE
+The starting rotors were set at the postions 4, 1, and 6, and the switchboard swapped the following letters: 
+
+H:K
+K:H
+[Debug only] During operation, the rotors stepped to the postions 13, 1, and 6 , which is NOMINAL
+
+* * *
+
+The original message was himiguel and the encoded message was FUDKLDDP
+The starting rotors were set at the postions 7, 3, and 5, and the switchboard swapped the following letters: 
+
+N:S
+O:U
+S:N
+U:O
+[Debug only] During operation, the rotors stepped to the postions 15, 4, and 5 , which is NOMINAL
+
+* * *
+
+The original message was FUDKLDDP and the encoded message was HIMIGUEL
+The starting rotors were set at the postions 7, 3, and 5, and the switchboard swapped the following letters: 
+
+N:S
+O:U
+S:N
+U:O
+[Debug only] During operation, the rotors stepped to the postions 15, 4, and 5 , which is NOMINAL
+
+* * *
+
+The original message was iwanttogohome and the encoded message was RIZIXXECLFHOU
+The starting rotors were set at the postions 4, 3, and 1, and the switchboard swapped the following letters: 
+
+A:B
+B:A
+C:R
+O:P
+P:O
+R:C
+[Debug only] During operation, the rotors stepped to the postions 17, 4, and 1 , which is NOMINAL
+
+* * *
+
+The original message was RIZIXXECLFHOU and the encoded message was IWANTTOGOHOME
+The starting rotors were set at the postions 4, 3, and 1, and the switchboard swapped the following letters: 
+
+A:B
+B:A
+C:R
+O:P
+P:O
+R:C
+[Debug only] During operation, the rotors stepped to the postions 17, 4, and 1 , which is NOMINAL
+
+* * *
+
+The original message was AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa and the encoded message was KKVKUCMDDULCSMDLGVFYUCWDVCULECPTNOMGRYTCOGFJSDDNMNQMYXEFVSKDRDOTGIEIDNSIDNDXZQDMIGBKVDHTBUGVCZBEWVILMPYRTUXXVBSUDHIMRXKLVXFNVSECLZMIEZRVY
+The starting rotors were set at the postions 0, 0, and 0, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 7, 5, and 0 , which is NOMINAL
+
+* * *
+
+The original message was Anjing and the encoded message was CDUXJF
+The starting rotors were set at the postions 3, 4, and 3, and the switchboard swapped the following letters: 
+
+A:Z
+Z:A
+[Debug only] During operation, the rotors stepped to the postions 9, 4, and 3 , which is NOMINAL
+
+* * *
+
+The original message was Byallknownlawsofaviationbeesshouldnotbeabletofly and the encoded message was NWGBALZURSSTGDXLGZGBCMVIKOXGCJMSPNAWHNOXIWZGTHKX
+The starting rotors were set at the postions 6, 2, and 1, and the switchboard swapped the following letters: 
+
+B:W
+K:U
+U:K
+W:B
+[Debug only] During operation, the rotors stepped to the postions 2, 4, and 1 , which is NOMINAL
+
+* * *
+
+The original message was NWGBALZURSSTGDXLGZGBCMVIKOXGCJMSPNAWHNOXIWZGTHKX and the encoded message was BYALLKNOWNLAWSOFAVIATIONBEESSHOULDNOTBEABLETOFLY
+The starting rotors were set at the postions 6, 2, and 1, and the switchboard swapped the following letters: 
+
+B:W
+K:U
+U:K
+W:B
+[Debug only] During operation, the rotors stepped to the postions 2, 4, and 1 , which is NOMINAL
+
+* * *
+
+The original message was helloworld and the encoded message was NAMETUENBA
+The starting rotors were set at the postions 3, 4, and 3, and the switchboard swapped the following letters: 
+
+A:X
+X:A
+[Debug only] During operation, the rotors stepped to the postions 13, 4, and 3 , which is NOMINAL
+
+* * *
+
+The original message was NAMETUENBA and the encoded message was HELLOWORLD
+The starting rotors were set at the postions 3, 4, and 3, and the switchboard swapped the following letters: 
+
+A:X
+X:A
+[Debug only] During operation, the rotors stepped to the postions 13, 4, and 3 , which is NOMINAL
+
+* * *
+
+The original message was a and the encoded message was B
+The starting rotors were set at the postions 2, 3, and 1, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 3, 3, and 1 , which is NOMINAL
+
+* * *
+
+The original message was hello and the encoded message was BOMSE
+The starting rotors were set at the postions 1, 4, and 3, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 6, 4, and 3 , which is NOMINAL
+
+* * *
+
+The original message was hello and the encoded message was BOMSE
+The starting rotors were set at the postions 1, 4, and 3, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 6, 4, and 3 , which is NOMINAL
+
+* * *
+
+The original message was hello and the encoded message was BOMSE
+The starting rotors were set at the postions 1, 4, and 3, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 6, 4, and 3 , which is NOMINAL
+
+* * *
+
+The original message was hello and the encoded message was BOMSE
+The starting rotors were set at the postions 1, 4, and 3, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 6, 4, and 3 , which is NOMINAL
+
+* * *
+
+The original message was hello and the encoded message was BOMSE
+The starting rotors were set at the postions 1, 4, and 3, and the switchboard swapped the following letters: 
+
+[Debug only] During operation, the rotors stepped to the postions 6, 4, and 3 , which is NOMINAL
+
+* * *
+

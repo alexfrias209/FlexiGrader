@@ -1,0 +1,9 @@
+tree    Zone    rain
+dev     7-10    30
+Avocado 9-11    45 
+Peach   4-9     65
+Apple   3-8     50
+Cherry  4-8     48
+Mango   10-11   40   
+Pear    3-10    50
+Soursop 9-11    40

@@ -1,0 +1,4 @@
+LOTR, 0,
+HP, 34,
+KFC Chicken, 22,
+Mockingbird, 1,

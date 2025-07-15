@@ -1,0 +1,29 @@
+appliance, brand, year, price, model
+refrigerator, LG, 2012, 2098.00, LMXS28626S
+refrigerator, LG, 2023, 4000.00, LRMVC2306 
+refrigerator, samsung, 2019, 500.80, LRFXC2606S
+refrigerator, samsung, 2020, 900.90, LRFLC2706S
+refrigerator, GE, 2020, 1010.00, LRFLC2703s
+refrigerator, GE, 2023, 1600, GNE27JYMFS
+refrigerator,samsung, 2022, 3000.00, LRFXC26069
+phone, samsung, 2020, 900.00,galaxy z flip 5
+phone, samsung, 2023, 1600, Galaxy S23
+phone, apple, 2020, 700.00, iphone 11
+phone, apple, 2022, 1000.99, iphone 13
+phone, google, 2022, 900.00, google pixel 3
+phone, nokia, 2023, 400.00, x30 5g
+phone, nokia, 2020, 600.00, 9 Pureview
+machine washer, samsung, 2019, 1000.00, WF45T6000AV
+machine washer, samsung, 2023, 700.00, WF45T6000A
+machine washer, LG, 2020, 800.99, WT7150CM
+machine washer, LG, 2023, 850.00, WM4200HWA
+machine washer, whirlpool, 2023, 930.00,WFW8620HW
+machine washer, whirlpool, 2015, 1400.00, W10869845
+stove, whirlpool, 2023, 1700.00, WGG745S0FH
+stove, whirlpool, 2015, 600.00, WFG515S0ES
+stove, bosch, 2021, 2300.00, HGI8056UC
+stove, bosch, 2023, 2700.00, HDI8056U
+stove, GE, 2023, 1200.00, JGB735
+stove, GE, 2022, 1200.00, JBS86SPSS
+stove, LG, 2023, 1400.00, LSGL6335F
+stove, LG, 2021, 1900.00, LSDL6336F

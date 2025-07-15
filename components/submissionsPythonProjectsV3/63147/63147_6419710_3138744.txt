@@ -1,0 +1,18 @@
+------------------------------------------------------------------------------------------------------------------------------
+    The Fibonnaci Sequence is a sequence of numbers in which each number is the sum of the previous two.
+    The Sequence starts of with the numbers 0 and 1 and are denoted as: 
+    F0 = 0 and F1 = 1. 
+    They will stay as such.
+
+    Numbers following F0 and F1 are denoted as: 
+    Fn = Fn-2 + Fn-1 for n >= 1
+
+    For example:
+    When n = 2                      When n = 3                      When n = 4                      When n = 5
+    => F2 = F2-2 + F2-1             => F3 = F3-2 + F3-1             => F4 = F4-2 + F4-1             => F5 = F5-2 + F5-1
+    => F2 = F0 + F1  => F2 = 1      => F3 = F1 + F2                 => F4 = F2 + F3                 => F5 = F3 + F4
+    => F2 = 0 + 1                   => F3 = 1 + 1                   => F4 = 1 + 2                   => F5 = 2 + 3
+    => F2 = 1                       => F3 = 2                       => F4 = 3                       => F5 = 5
+
+    This pattern will go on infinitely...
+------------------------------------------------------------------------------------------------------------------------------

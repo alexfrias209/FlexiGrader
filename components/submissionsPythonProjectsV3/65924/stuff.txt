@@ -1,0 +1,302 @@
+
+Anchorage_Alaska = Population = 296,188, Total Crime = 6640.04 
+	  
+
+Chandler_Arizona = Population = 249,355 , Total Crime = 2589.08
+	  
+
+Gilbert_Arizona = Population = 242,090 , Total Crime = 1483.75
+	  
+
+Glendale_Arizona = Population = 249,273 , Total Crime = 5037.85
+	  
+
+Mesa_Arizona = Population = 492,268 , Total Crime 2592.49
+	  
+
+Phoenix_Arizona = Population = 1,608,139 , Total Crime = 4443.2
+	  
+
+Scottsdale_Arizona = Population = 251,840 , Total Crime = 2338.38
+	  
+
+Tucson_Arizona = Population = 532,323 , Total Crime = 6082.78
+	  
+
+Anaheim_California = Population = 353,400 , Total Crime = 2997.74
+	  
+
+Bakersfield_California = Population = 381,154 , Total Crime = 4618.34
+	  
+
+ChulaVista_California = Population = 271,109 , Total Crime = 1738.79
+	  
+
+Fremont_California = Population = 236,368 , Total Crime = 2343.8
+	  
+
+Fresno_California = Population = 526,371 , Total Crime = 4447.63
+	  
+
+Irvine_California = Population = 276,115 , Total Crime = 1381.31
+	  
+
+Long_Beach_California = Population = 471,397 , Total Crime = 3357.25
+	  
+
+Los_Angeles_California = Population = 3,898,747 , Total Crime = 3332.52
+
+
+Madera_California = Population = 67,944 , Total Crime = 1675
+
+
+Merced_California = Population = 89,308 , Total Crime = 3614
+	  
+
+Oakland_California = Population = 424,915 , Total Crime = 7328.29
+
+	  
+Riverside_California = Population = 328,023 , Total Crime = 3589.38
+	  
+
+Sacramento_California = Population = 499,997 , Total Crime = 3654.02
+
+	  
+San_Bernardino_California = Population = 217,259 , Total Crime = 5189.66
+
+	  
+San_Diego_California = Population = 1,386,932 , Total Crime = 2220.67
+
+    
+San_Francisco_California = Population = 881,255 , Total Crime = 6917.4
+
+	  
+San_Jose_California = Population = 1,013,240 , Total Crime = 2861.02
+
+	  
+Santa_Ana_California = Population = 335,699 , Total Crime = 2596.67
+	  
+
+Santa_Clarita_California = Population = 216,350 , Total Crime = 1592.79
+	  
+
+Stockton_California = Population = 309,566 , Total Crime = 5109.09
+	  
+
+Aurora_Colorado = Population = 368,018 , Total Crime = 3630.53
+	  
+
+Colorado_Springs_Colorado = Population = 472,958 , Total Crime = 3765.25
+	  
+
+Denver_Colorado = Population = 706,616 , Total Crime = 4360.93
+
+	  
+Washington_District_of_colombia = Population = 693,972 , Total Crime = 5104.96
+	  
+
+Hialeah_Florida = Population = 238,260 , Total Crime = 2422.14
+	  
+
+Jacksonville_Florida = Population = 894,638 , Total Crime = 4168.73
+	  
+
+Miami_Florida = Population = 463,009 , Total Crime = 4750.89
+	  
+
+Orlando_Florida = Population = 283,982 , Total Crime = 6206.38
+	  
+
+St.Petersburg_Florida = Population = 263,712 , Total Crime = 5029.35
+	  
+
+Tampa_Florida = Population = 384,360 , Total Crime = 2218.24
+	  
+
+Atlanta_Georgia = Population = 481,343 , Total Crime = 5727.52
+	  
+
+Savannah_Georgia = Population = 242,941 , Total Crime = 3901.36
+	   
+
+Honolulu_Hawaii = Population = 990,384 , Total Crime = 3053.77
+	  
+
+Boise_Idado = Population = 225,677 , Total Crime = 2741.97
+	  
+
+Chicago_Illinois = Population = 2,746,388 , Total Crime == 4381.65
+	  
+
+Fort_Wayne_Indiana = Population = 266,259 , Total Crime = 3572.46
+	  
+
+Indianapolis_Indiana = Population = 870,788 , Total Crime = 5775.23
+	  
+
+Des_Moines_Iowa = Population = 217,277 , Total Crime = 5102.7
+	  
+
+Wichita_Kansas = Population = 391,084 , Total Crime = 6583.5
+	  
+
+Lexington_Kentucky = Population = 322,332 , Total Crime = 4145.73
+	  
+
+Louisville_Metro_Kentucky = Population = 684,362 , Total Crime = 4769.99
+	  
+
+Baton_Rouge_Louisiana = Population = 227,403 , Total Crime = 6693.84
+	  
+
+New_Orleans_Louisiana = Population = 397,447 , Total Crime = 5375.57
+	  
+
+Baltimore_Maryland = Population = 613,217 , Total Crime = 6997.68
+	  
+
+Boston_Massachusetts = Population = 682,903 , Total Crime = 2758.22
+	  
+
+Detroit_Michigan = Population = 670,792 , Total Crime = 6726.82
+	  
+
+Minneapolis_Minnesota = Population = 418,971 , Total Crime = 5768.18
+	  
+
+St.Paul_Minnesota = Population = 306,696 , Total Crime = 4262.86
+	  
+
+Kansas_City_Missouri = Population = 484,948 , Total Crime = 6309.55
+	  
+
+St.Louis_Missouri = Population = 310,284 , Total Crime = 8188.31
+	  
+
+Omaha_Nebraska = iPopulation = 449,388 , Total Crime = 4527.49
+	  
+
+Henderson_Nevada = Population = 299,285 , Total Crime = 2025.17
+	  
+
+Las_Vegas_Nevada = Population = 627,244 , Total Crime = 3567.87
+	  
+
+Paradise_Nevada = Population = 242,537 , Total Crime = 3405.26
+	  
+
+Reno_Nevada = Population = 248,531 , Total Crime = 3766.53
+	  
+
+Jersey_City_New_Jersey = Population = 267,906 , Total Crime = 2330.67
+
+  
+Newark_New_Jersey = Population = 283,673 , Total Crime = 3316.84
+
+	  
+Albuquerque_New_Mexico = Population = 561,375 , Total Crime = 8734.98
+
+	  
+Buffalo_New_York = iPopulation = 256,169 , Total Crime = 4930.34
+
+	  
+New_York_New_York = Population = 8,804,190 , Total Crime = 1987.49
+
+	  
+Charlotte_Mecklenburg_North_Carolina = Population = 914,609 , Total Crime = 3836.39
+
+	  
+Raleigh_North_Carolina = Population = 269,088 , Total Crime = 3837.78
+
+	  
+Greensboro_North_Carolina = Population = 290,051 , Total Crime = 3601.78
+
+	  
+Cincinnati_Ohio = Population = 09,317 , Total Crime = 5997
+
+
+Cleveland_Ohio = Population = 372,624 , Total Crime = 6538.45
+
+	  
+Columbus_Ohio = iPopulation = 905,748 , Total Crime = 4501.8
+
+	  
+Toledo_Ohio = Population = 270,871 , Total Crime = 4003.74
+
+	  
+Oklahoma_City_Oklahoma = Population = 648,260 , Total Crime = 4552.5
+	  
+
+Tulsa_Oklahoma = Population = 404,868 , Total Crime = 6532.01
+
+	  
+Portland_Oregon = Population = 610,343 , Total Crime = 6239.99
+
+	  
+Philadelphia_Pennsylvania = Population = 1,603,797 , Total Crime = 4037.27
+
+	  
+Pittsburgh_Pennsylvania = Population = 305,932 , Total Crime = 3815.23
+	  
+
+Memphis_Tennessee = Population = 652,765 , Total Crime = 8357.07
+	  
+
+Nashville_Tennessee = Population = 674,942 , Total Crime = 4966.5
+
+	  
+Arlington_Texas = Population = 397,377 , Total Crime = 3721.91
+	  
+
+Austin_Texas = Population = 971,949 , Total Crime = 3612.23
+
+ 
+Corpus_Christi_Texas = Population = 329,256 , Total Crime = 4285.11
+	  
+
+Dallas_Texas = Population = 1,304,379 , Total Crime = 3985.95
+
+	  
+El_Paso_Texas = Population = 688,667 , Total Crime = 2203.25
+
+	  
+Fort_Worth_Texas = Population = 873,069 , Total Crime = 3792.83
+
+	  
+Allen_Texas = Population = 236,243 , Total Crime = 3355.44
+
+	  
+Houston_Texas = Population = 2,304,580 , Total Crime = 5252.08
+
+	  
+Frisco_Texas = Population = 242,062 , Total Crime = 2775.73
+
+	  
+Laredo_Texas = Population = 260,669 , Total Crime = 2832.71
+
+	  
+Denton_Texas = Population = 290,413 , Total Crime = 1892.14
+
+	  
+San_Antonia_Texas = 1,434,625, Total Crime = 5565.95
+
+	  
+Chesapeake_Virginia = Population = 240,119 , Total Crime = 2699.5
+
+	  
+Norfolk_Virginia = Population = 245,190 , Total Crime = 4308.09
+
+	  
+Virginia_Beach_Virginia = Population = 454,353 , Total Crime = 2083.4
+
+	  
+Seattle_Washington = Population = 21,365 , Total Crime = 5911.99
+
+	  
+Vancouver_Washington = Population = 217,066 , Total Crime = 7881.01
+
+	  
+Madison_Wsiconsin = Population = 255,850 , Total Crime = 3040.46
+
+	  
+Milwaukee_Wisconsin = Population = 595,168 , Total Crime = 5441.99

@@ -1,0 +1,55 @@
+
+State_Name	Minimum_Wage_Rate	 	
+Alabama	$7.25 / hour 
+Alaska	$10.85 / hour 
+Arizona	$13.85 / hour 
+Arkansas	$11.00 / hour 
+California	$15.50 / hour 
+Colorado	$13.65 / hour  
+Connecticut	$14.00 / hour 
+Delaware	$11.75 / hour  
+Columbia	$16.50 / hour 
+Federal	$7.25 / hour 
+Florida	$11.00 / hour 
+Georgia	$7.25 / hour 
+Hawaii	$12.00 / hour 
+Idaho	$7.25 / hour 
+Illinois	$13.00 / hour 
+Indiana	$7.25 / hour 
+Iowa	$7.25 / hour 
+Kansas	$7.25 / hour 
+Kentucky	$7.25 / hour 
+Louisiana	$7.25 / hour 
+Maine	$13.80 / hour 
+Maryland	$13.25 / hour 
+Massachusetts	$15.00 / hour 
+Michigan	$10.10 / hour 
+Minnesota	$10.59 / hour 
+Mississippi	$7.25 / hour 
+Missouri	$12.00 / hour 
+Montana	$9.95 / hour 
+Nebraska	$10.50 / hour 
+Nevada	$10.50 / hour 
+New_Hampshire	$7.25 / hour 
+New_Jersey	$14.13 / hour  
+New_Mexico	$12.00 / hour 
+New_York	$14.20 / hour 
+North_Carolina	$7.25 / hour 
+North_Dakota	$7.25 / hour 
+Ohio	$10.10 / hour 
+Oklahoma	$7.25 / hour 
+Oregon	$13.50 / hour 
+Pennsylvania	$7.25 / hour 
+Puerto Rico	$8.50 / hour 
+Rhode_Island	$13.00 / hour 
+South Carolina	$7.25 / hour 
+South Dakota	$10.80 / hour 
+Tennessee	$7.25 / hour 
+Texas	$7.25 / hour 
+Utah	$7.25 / hour 
+Vermont	$13.18 / hour 
+Virginia	$12.00 / hour 
+Washington	$15.74 / hour 
+West_Virginia	$8.75 / hour 
+Wisconsin	$7.25 / hour 
+Wyoming	$7.25 / hour 

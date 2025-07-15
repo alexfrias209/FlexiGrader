@@ -1,0 +1,27 @@
+City        Zone        rain
+
+dev         8b          10
+
+New-York    7b          46.6
+
+Los-Angeles    10b      14.77
+
+San-Francisco  10a      22.89
+
+Seattle     8b          39.34
+
+Dallas      8a      36.14
+
+Houston    9a   49.77
+
+Chicago    6a   36.89
+
+Miami  10b  61.9
+
+Philadelphia   7b   41.3
+
+Atlanta    7b   47.12
+
+Merced 9a 20-25  13
+
+Las-Vegas   9a  20-25  4.19

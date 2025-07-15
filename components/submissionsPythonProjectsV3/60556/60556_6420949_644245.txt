@@ -1,0 +1,8 @@
+What car part is responsible for charging the battery as the car is running? A:alternator  B:car battery C:steering wheel  D:ignition
+What are the main parts of the drivetrain?   A:motor,steering wheeel   B:motor,transmission   C:battery,driveshaft  D:alternator,tires
+What is paired with the rim to create a wheel?   A:tire    B:rim C:wheeel  D:gauge
+What is responsible for the cars timing? A:tachometer  B:ECU C:tire    D:motor
+What part can form high compression? A:intercooler B:turbocharger    C:car alarm   D:tachometer 
+What is the "motor"? A:Part responsible for charging battery B:part responsible for charging phone C:part responsible for moving car   D:driveshaft
+What is the "transmission"?  A:Opens a Door B:Rear diff   C:Steers car  D:Shifts motor 
+What is the "Tachometer"?   A:measures speed  B:checks rpm  C:tells motor to accelerate   D:checks engine

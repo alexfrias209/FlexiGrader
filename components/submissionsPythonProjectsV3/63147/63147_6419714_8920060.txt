@@ -1,0 +1,27 @@
+
+------------------------------------------------------------------------------------------------------------------------------------
+        The Golden Ratio is often denoted by the Greek letter PHI (looks like an O with a line straight down the middle).
+        It's approximately equal to 1.6180339887...
+        PHI is an irrational number so the terms go on infinetly. 
+
+        The relationship between the Golden Ratio and the Fibonacci Sequence lies in how the Fibonacci sequence 
+        converges to the Golden Ratio as you take the ratio of consecutive Fibonacci numbers. 
+        Again, the Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum 
+        of the two preceding ones (0, 1, 1, 2, 3, 5, 8, 13, ...).
+
+        If you take the ratio of consecutive Fibonacci numbers (e.g., 5/3, 8/5, 13/8, ...), these ratios
+        approach the Golden Ratio as you go further along the Fibonacci sequence.
+        So for my math people out there, this is how its described matematicaly:
+
+                lim n -> inf [(Fn+1)/(Fn)] = PHI , for n >= 1
+                Where Fn is a Fibonacci number
+
+        This also implies that we can do this backwards; multiply PHI by a Fibonacci Number to get the next Fibbonaci Number:
+
+                lim n -> inf [Fn * PHI] = Fn+1 , for n >= 2
+                Where Fn is a Fibonacci number
+
+        Of course when we do this, the poduct will contain alot of decimals, so we should round to the nearest whole number.
+
+        This relationship showcases the intrinsic connection between the Fibonacci sequence and the Golden Ratio.
+------------------------------------------------------------------------------------------------------------------------------------

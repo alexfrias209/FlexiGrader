@@ -1,0 +1,10 @@
+Exchange rate for 1 AUD
+EUR	0.60
+USD	0.63
+JPY	94.06
+GBP	0.52
+CHF	0.57
+CAD	0.86
+HKD	4.92
+MXN	11.38
+NZD	1.07

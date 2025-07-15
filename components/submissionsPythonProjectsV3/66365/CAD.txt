@@ -1,0 +1,10 @@
+Exchange rate for 1 CAD
+EUR	0.70
+USD	0.73
+JPY	109.42
+GBP	0.60
+CHF	0.66
+AUD	1.16
+HKD	5.72
+MXN	13.24
+NZD	1.24

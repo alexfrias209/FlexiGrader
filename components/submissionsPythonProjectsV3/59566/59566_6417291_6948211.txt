@@ -1,0 +1,2 @@
+Person, your_choice
+Your recent update score: 0, Person's score: 1

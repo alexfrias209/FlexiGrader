@@ -1,0 +1,32 @@
+Characteristic: Sun
+Description: This symbol (☉) is the Sun symbol. It represents the Sun, also known as Sol.
+Characteristic: Constellation
+Description: Constellations are a large, recognizable group of stars. These star patterns are often ancient and named and shaped after mythological figures. All constellations have a dedicated region of space around them, of which many millions of stars and deep sky objects are a part. There are 88 official constellations in the entire night sky. Super Star Catalog contains 41.
+Characteristic: Name
+Description: The proper names of stars are mostly ancient names given to stars according to their constellation, and the story that is told by the figure the stars are a part of in the sky. Stars with proper names tend to be the brightest because, in ancient times, these were the only ones visible to humans. The vast majority of stars with proper names are in Arabic, followed by Greek and Latin.
+Characteristic: Designation
+Description: A Bayer designation is a classification of stars by their relative brightness and constellation, using the Greek alphabet. The brightest stars in any given constellation are given the letters at the beginning of the alphabet (Alpha, Beta, Gamma) whereas the dimmest stars receive the last letters (Psi, Chi, Omega). All stars are given the plural conjugation of the constellation they belong to. For example, Vega, the brightest star in the constellation Lyra, is called Alpha Lyrae.
+Characteristic: Spectral
+Description: The spectral class of stars is simple but unintuitive. Around 90% of stars are called main-sequence stars, and they can be classified by color. O-type stars are purple, B-type stars are blue, A-type stars are white, F-type stars are yellow-white, G-type stars are yellow, K-type stars are orange, and M-type stars are red. The common abbreviation is "OBAFGKM."  Furthermore, The number next to the letter of a given star indicates temperature within a certain class. This scale is from 0-9, or hottest to coolest. For example, Vega, which is classified as A0V, is much hotter than Acubens, an A7V class star. The other 10% of stars are brown dwarfs (L, T, Y), carbon stars (C, S), white dwarfs (D), and non-stellar objects; Planetary Nebulae (P) and Novae (Q).
+Characteristic: Radius
+Description: The radius of stars is often measured with solar radii (R☉), a unit derived from the current radius of the Sun. A star with 1 R☉ is the same size as the Sun, while a star with 2 R☉ has twice the radius.
+Characteristic: Mass
+Description: The mass of stars is measured with solar mass (M☉), a unit derived from the current mass of the Sun. A star with 1 M☉ is the same mass as the Sun, while a star with 10 R☉ is ten times as heavier.
+Characteristic: Temperature
+Description: The surface temperature of stars is measured in Kelvin (K), a unit which is nearly the same scale as Celsius, but offset by +273.15 degrees (212F = 100C = 373.15K).
+Characteristic: Distance
+Description: Interstellar distances are usually measured in light years (Ly), the distance that light travels in 365 days. This is roughly 10 trillion kilometers (or ~6 trillion miles).
+Characteristic: Age
+Description: The ages of stars are typically measured in millions or billions of years. In the Super Star Catalog, all celestial bodies' ages are given by millions of years (1 million years = 1 Myr). For reference, the sun is 4600 Myr old, while the universe has existed for around 13772 Myr.
+Characteristic: Luminosity
+Description: Luminosity is a measurement of energy (light) emitted over time. In astronomy, the luminosity of other stars is measured based on our Sun's luminosity (1 L☉), which is 3.846x10^26 Watts. A star with 2 L☉ produces twice this amount of energy in the same amount of time, whereas a star with 0.5L☉ emits half of the energy the Sun does. The luminosity class of a star is also indicated in its spectral class using Latin numerals; Stars with V or IV, such as the Sun which is G2 V, are normal main-sequence stars, or dwarfs. III and below indicate increasing size and brightness, with 0 and Ia class stars being the biggest, brightest stars in the universe.
+Characteristic: Apparent Magnitude
+Description: Apparent magnitude is a scale of relative brightness of celestial objects as seen from Earth. The lower the magnitude, the brighter the object. The Sun has an apparent magnitude of -26.74, Luna (the moon) has a magnitude of -12.74, and Sirius, the brightest star in the night sky, has -1.33.
+Characteristic: Absolute Magnitude
+Description: The absolute magnitude of stars is a scale of brightness that considers the varying distances of stars. The absolute magnitude of a star is its brightness as seen from 10 parsecs (32.615 Ly) away. The lower the magnitude, the brighter the object: Polaris, the North Star has an absolute magnitude of -3.6, whereas the Sun's absolute magnitude is 4.83.
+Characteristic: Color
+Description: The color of a star is... its color. In actuality, all stars emit light across the entire electromagnetic spectrum, and for that reason are mostly white (especially when viewed from space). But because each spectral class peaks at different points in the visible light spectrum, they can be classified by "color". There are NO green stars and that's terrible. Also, O-type stars aren't actually purple, but that's what they look like to me.
+Characteristic: Size
+Description: The Roman numeral next to the spectral class indicates either the size or evolutionary stage of a star. The size and luminosity increase as the numerals approach zero. VII (D) are white dwarfs, VI are sub-dwarfs, V indicates normal main-sequence dwarfs, IV are sub-giants, III and II are giants, and I indicates a star is a supergiant. 0 and Ia class stars are called hyper-giants.  Stars that are supergiants are rarely yellow (F-G), and when they are, it isn't for long. Because of their instability, most of them eventually heat up to class B or cool down to class M in a process that takes days to years.
+Characteristic:     
+Description:     

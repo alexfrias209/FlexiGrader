@@ -1,0 +1,10 @@
+Exchange rate for 1 GBP
+EUR	1.15
+USD	1.21
+JPY	181.33
+CHF	1.10
+AUD	1.93
+CAD	1.66
+HKD	9.49
+MXN	21.93
+NZD	2.06

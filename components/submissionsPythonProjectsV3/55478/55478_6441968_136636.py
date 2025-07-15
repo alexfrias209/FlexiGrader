@@ -1,0 +1,129 @@
+# Enhanced Budgeting Assistant
+# This code is here to help you budget your money using your expenses and a set budget.
+# You can also determine how much you want to save based on your budget by setting a savings percentage.
+
+class Expense:
+    def __init__(self, name, amount):
+        self.name = name
+        self.amount = amount
+
+    def __str__(self):
+        return f"{self.name}: ${self.amount:.2f}"
+
+expenses = []
+budget = 0
+savings_percentage = 0.0
+
+def add_expense():
+    # Allows the user to add expenses by entering a name and an amount.
+    # Creates an Expense object and appends it to the expenses list.
+    name = input("Enter the name of the expense: ")
+    amount = float(input("Enter the expense amount: $"))
+    expense = Expense(name, amount)
+    expenses.append(expense)
+    print("Expense added successfully!")
+
+def view_expenses():
+    # Displays a summary of the recorded expenses.
+    # Calculates the total expenses and remaining budget based on the user's budget limit.
+    # If a savings percentage is set, it also calculates and displays a savings goal.
+    if not expenses:
+        print("No expenses recorded yet.")
+    else:
+        print("\nList of Expenses:")
+        for i, expense in enumerate(expenses, 1):
+            print(f"{i}. {expense}")
+        total_expenses, remaining_budget = calculate_total_and_remaining_budget()
+        print(f"Total Expenses: ${total_expenses:.2f}")
+        print(f"Remaining Budget: ${remaining_budget:.2f}")
+        if savings_percentage > 0:
+            savings = budget * (savings_percentage / 100)
+            print(f"Savings Goal ({savings_percentage}%): ${savings:.2f}")
+
+def calculate_total_and_remaining_budget():
+    # Calculate the total expenses and remaining budget based on the user's budget limit.
+    total_expenses = sum(expense.amount for expense in expenses)
+    remaining_budget = budget - total_expenses
+    return total_expenses, remaining_budget
+
+def set_budget():
+    # Lets the user set a budget limit.
+    global budget
+    budget = float(input("Enter your budget limit: $"))
+    print(f"Budget limit set to: ${budget:.2f}")
+
+def set_savings_percentage():
+    # Allows the user to specify a percentage of their budget to save.
+    global savings_percentage
+    savings_percentage = float(input("Enter the percentage of your budget you want to save (e.g., 10%): "))
+    print(f"Savings percentage set to: {savings_percentage}%")
+
+def analyze_spending():
+    # Provides a spending analysis, including the highest, lowest, and average expenses.
+    if not expenses:
+        print("No expenses recorded yet.")
+    else:
+        print("\nSpending Analysis:")
+        # Calculate and display statistics such as the highest expense, lowest expense, and average expense.
+        highest_expense = max(expenses, key=lambda expense: expense.amount)
+        lowest_expense = min(expenses, key=lambda expense: expense.amount)
+        average_expense = sum(expense.amount for expense in expenses) / len(expenses)
+        print(f"Highest Expense: {highest_expense.name} - ${highest_expense.amount:.2f}")
+        print(f"Lowest Expense: {lowest_expense.name} - ${lowest_expense.amount:.2f}")
+        print(f"Average Expense: ${average_expense:.2f}")
+
+def export_to_csv():
+    # Exports the recorded expenses, total expenses, and remaining budget to a CSV file.
+    import csv
+    if not expenses:
+        print("No expenses recorded to export.")
+    else:
+        filename = input("Enter the filename for the CSV export (e.g., expenses.csv): ")
+        total_expenses, remaining_budget = calculate_total_and_remaining_budget()
+        with open(filename, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Expense Name", "Expense Amount"])
+            for expense in expenses:
+                writer.writerow([expense.name, expense.amount])
+            writer.writerow(["Total Expenses", "Remaining Budget"])
+            writer.writerow([total_expenses, remaining_budget])
+        print(f"Expenses exported to {filename} successfully!")
+
+# Loop to repeatedly ask for the budget until a valid budget is provided.
+while True:
+    set_budget()
+    if budget > 0:
+        break
+    else:
+        print("Please enter a valid budget greater than 0.")
+
+# This code operates in a loop that will display a menu of options for the user.
+# The user can choose to add expenses, view expenses, set a savings, percentage, analyze spending, or export expenses to CSV.
+# The loop will continue until the user chooses to exit by typing (#7) to exit.
+
+while True:
+    print("\nOptions:")
+    print("1. Add an Expense")
+    print("2. View Expenses")
+    print("3. Set Savings Percentage")
+    print("4. Analyze Spending")
+    print("5. Export Expenses to CSV")
+    print("6. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        add_expense()
+    elif choice == '2':
+        view_expenses()
+    elif choice == '3':
+        set_savings_percentage()
+    elif choice == '4':
+        analyze_spending()
+    elif choice == '5':
+        export_to_csv()
+    elif choice == '6':
+        print("Thank you for using Enhanced Budgeting Assistant!")
+        break
+    else:
+        print("Invalid choice. Please choose again.")

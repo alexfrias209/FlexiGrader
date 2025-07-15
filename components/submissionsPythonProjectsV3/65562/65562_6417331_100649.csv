@@ -1,0 +1,241 @@
+From City,To City,Distance In Miles
+Merced,San Francisco,131
+Merced,Oakland,121
+Merced,SanDiego,393
+Merced,Palm Springs,378
+Merced,Sacramento,118
+Merced,San Leandro,111
+Merced,Huntington Park,280
+Merced,Modesto,39.4
+Merced,Palo Alto,130
+Merced,Berkeley,123
+Merced,Oceanside,357
+Merced,Huntington Park,280
+Merced,San Jose,123
+Merced,San Clemente,335
+Merced,Turlock,25.8
+Merced,Big Bear Lake,351
+Merced,Lake Elsinore,340
+Merced,Pasadena,275
+Merced,Fullerton,299
+Merced,Santa Cruz,121
+Merced,Los Angeles,273
+Merced,El Cerrito,128
+Merced,Cathedral City,408
+San Francisco,Oakland,13
+San Francisco,SanDiego,502
+San Francisco,Palm Springs,487
+San Francisco,Sacramento,89
+San Francisco,San Leandro,23.1
+San Francisco,Huntington Park,1.7
+San Francisco,Modesto,90
+San Francisco,Palo Alto,32.8
+San Francisco,Berkeley,14
+San Francisco,Oceanside,466
+San Francisco,Huntington Park,1.7
+San Francisco,San Jose,48.6
+San Francisco,San Clemente,444
+San Francisco,Turlock,106
+San Francisco,Big Bear Lake,470
+San Francisco,Lake Elsinore,449
+San Francisco,Pasadena,384
+San Francisco,Fullerton,408
+San Francisco,Santa Cruz,74
+San Francisco,Los Angeles,382
+San Francisco,El Cerrito,17.3
+San Francisco,Cathedral City,496
+Oakland,SanDiego,491
+Oakland,Palm Springs,475
+Oakland,Sacramento,82
+Oakland,San Leandro,13.2
+Oakland,Huntington Park,378
+Oakland,Modesto,80
+Oakland,Palo Alto,34
+Oakland,Berkeley,4.9
+Oakland,Oceanside,457
+Oakland,Huntington Park,378
+Oakland,San Jose,41.7
+Oakland,San Clemente,432
+Oakland,Turlock,95
+Oakland,Big Bear Lake,461
+Oakland,Lake Elsinore,439
+Oakland,Pasadena,375
+Oakland,Fullerton,397
+Oakland,Santa Cruz,71
+Oakland,Los Angeles,372
+Oakland,El Cerrito,10.4
+Oakland,Cathedral City,484
+San Diego,Palm Springs,139
+San Diego,Sacramento,504
+San Diego,San Leandro,482
+San Diego,Huntington Park,177
+San Diego,Modesto,432
+San Diego,Palo Alto,477
+San Diego,Berkeley,494
+San Diego,Oceanside,37.1
+San Diego,Huntington Park,117
+San Diego,San Jose,460
+San Diego,San Clemente,59
+San Diego,Turlock,418
+San Diego,Big Bear Lake,145
+San Diego,Lake Elsinore,76
+San Diego,Pasadena,138
+San Diego,Fullerton,100
+San Diego,Santa Cruz,459
+San Diego,Los Angeles,121
+San Diego,El Cerrito,499
+San Diego,Cathedral City,148
+Palm Springs,Sacramento,488
+Palm Springs,San Leandro,466
+Palm Springs,Huntington Park,109
+Palm Springs,Modesto,413
+Palm Springs,Palo Alto,461
+Palm Springs,Berkeley,479
+Palm Springs,Oceanside,110
+Palm Springs,Huntington Park,109
+Palm Springs,San Jose,444
+Palm Springs,San Clemente,113
+Palm Springs,Turlock,400
+Palm Springs,Big Bear Lake,81
+Palm Springs,Lake Elsinore,70
+Palm Springs,Pasadena,105
+Palm Springs,Fullerton,91
+Palm Springs,Santa Cruz,444
+Palm Springs,Los Angeles,107
+Palm Springs,El Cerrito,483
+Palm Springs,Cathedral City,7.1
+Sacramento,San Leandro,92
+Sacramento,Huntington Park,391
+Sacramento,Modesto,75
+Sacramento,Palo Alto,120
+Sacramento,Berkeley,79
+Sacramento,Oceanside,469
+Sacramento,Huntington Park,391
+Sacramento,San Jose,121
+Sacramento,San Clemente,446
+Sacramento,Turlock,88
+Sacramento,Big Bear Lake,464
+Sacramento,Lake Elsinore,451
+Sacramento,Pasadena,387
+Sacramento,Fullerton,410
+Sacramento,Santa Cruz,147
+Sacramento,Los Angeles,384
+Sacramento,El Cerrito,73
+Sacramento,Cathedral City,498
+San Leandro,Huntington Park,21.4
+San Leandro,Modesto,72
+San Leandro,Palo Alto,26.5
+San Leandro,Berkeley,15
+San Leandro,Oceanside,446
+San Leandro,Huntington Park,21.4
+San Leandro,San Jose,34.2
+San Leandro,San Clemente,423
+San Leandro,Turlock,85
+San Leandro,Big Bear Lake,450
+San Leandro,Lake Elsinore,428
+San Leandro,Pasadena,364
+San Leandro,Fullerton,387
+San Leandro,Santa Cruz,64
+San Leandro,Los Angeles,361
+San Leandro,El Cerrito,19.9
+San Leandro,Cathedral City,475
+Huntington Park,Modesto,318
+Huntington Park,Palo Alto,363
+Huntington Park,Berkeley,380
+Huntington Park,Oceanside,80
+Huntington Park,Huntington Park,0
+Huntington Park,San Jose,346
+Huntington Park,San Clemente,58
+Huntington Park,Turlock,304
+Huntington Park,Big Bear Lake,99
+Huntington Park,Lake Elsinore,65
+Huntington Park,Pasadena,16
+Huntington Park,Fullerton,22.1
+Huntington Park,Santa Cruz,345
+Huntington Park,Los Angeles,6.2
+Huntington Park,El Cerrito,385
+Huntington Park,Cathedral City,116
+Palo Alto,Berkeley,38.5
+Palo Alto,Oceanside,441
+Palo Alto,Huntington Park,363
+Palo Alto,San Jose,18.6
+Palo Alto,San Clemente,418
+Palo Alto,Turlock,105
+Palo Alto,Big Bear Lake,445
+Palo Alto,Lake Elsinore,424
+Palo Alto,Pasadena,359
+Palo Alto,Fullerton,383
+Palo Alto,Santa Cruz,43.9
+Palo Alto,Los Angeles,357
+Palo Alto,El Cerrito,46.2
+Palo Alto,Cathedral City,470
+Berkeley,Oceanside,458
+Berkeley,Huntington Park,380
+Berkeley,San Jose,45.9
+Berkeley,San Clemente,436
+Berkeley,Turlock,98
+Berkeley,Big Bear Lake,462
+Berkeley,Lake Elsinore,441
+Berkeley,Pasadena,376
+Berkeley,Fullerton,400
+Berkeley,Santa Cruz,75
+Berkeley,Los Angeles,374
+Berkeley,El Cerrito,5.9
+Berkeley,Cathedral City,488
+,,
+,,
+San Jose,San Clemente,402
+San Jose,Turlock,99
+San Jose,Big Bear Lake,433
+San Jose,Lake Elsinore,407
+San Jose,Pasadena,342
+San Jose,Fullerton,366
+San Jose,Santa Cruz,32.3
+San Jose,Los Angeles,340
+San Jose,El Cerrito,52
+San Jose,Cathedral City,454
+San Clemente,Turlock,359
+San Clemente,Big Bear Lake,105
+San Clemente,Lake Elsinore,68
+San Clemente,Pasadena,79
+San Clemente,Fullerton,41.1
+San Clemente,Santa Cruz,405
+San Clemente,Los Angeles,62
+San Clemente,El Cerrito,440
+San Clemente,Cathedral City,122
+Turlock,Big Bear Lake,380
+Turlock,Lake Elsinore,365
+Turlock,Pasadena,300
+Turlock,Fullerton,324
+Turlock,Santa Cruz,112
+Turlock,Los Angeles,298
+Turlock,El Cerrito,103
+Turlock,Cathedral City,675
+Big Bear Lake,Lake Elsinore,76
+Big Bear Lake,Pasadena,87
+Big Bear Lake,Fullerton,86
+Big Bear Lake,Santa Cruz,428
+Big Bear Lake,Los Angeles,97
+Big Bear Lake,El Cerrito,467
+Big Bear Lake,Cathedral City,91
+Lake Elsinore,Pasadena,66
+Lake Elsinore,Fullerton,45.5
+Lake Elsinore,Santa Cruz,406
+Lake Elsinore,Los Angeles,71
+Lake Elsinore,El Cerrito,18.1
+Lake Elsinore,Cathedral City,79
+Pasadena,Fullerton,40.5
+Pasadena,Santa Cruz,341
+Pasadena,Los Angeles,11
+Pasadena,El Cerrito,381
+Pasadena,Cathedral City,113
+Fullerton,Santa Cruz,365
+Fullerton,Los Angeles,26.3
+Fullerton,El Cerrito,405
+Fullerton,Cathedral City,100
+Santa Cruz,Los Angeles,344
+Santa Cruz,El Cerrito,80
+Santa Cruz,Cathedral City,458
+Los Angeles,El Cerrito,379
+Los Angeles,Cathedral City,116
+El Cerrito,Cathedral City,493

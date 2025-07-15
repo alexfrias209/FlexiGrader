@@ -1,0 +1,10 @@
+Exchange rate for 1 NZD
+EUR	0.56
+USD	0.59
+JPY	88.06
+GBP	0.49
+CHF	0.53
+AUD	0.94
+CAD	0.80
+HKD	4.61
+MXN	10.65

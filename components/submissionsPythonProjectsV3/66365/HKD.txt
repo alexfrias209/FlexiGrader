@@ -1,0 +1,10 @@
+Exchange rate for 1 HKD
+EUR	0.12
+USD	0.13
+JPY	19.11
+GBP	0.11
+CHF	0.12
+AUD	0.20
+CAD	0.17
+MXN	2.31
+NZD	0.22

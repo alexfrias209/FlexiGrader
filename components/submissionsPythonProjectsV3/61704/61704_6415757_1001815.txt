@@ -1,0 +1,12 @@
+animals, How many years can a snail sleep for?, 3
+animals, How many mammals can lay eggs?, 5
+animals, Which has the thickest fur of any mammal?, Sea otter
+animals, What is the closest living relative to the T-rex?, chicken
+sports, How long is a marathon?, 26.2 miles
+sports, How many players are on each side of the net in beach volleyball?, 2
+sports, The Olympics are held every how many years?, 4 years
+sports,  What sport is a lot like softball?, baseball
+foods, What was the first soft drink created?, Coca-cola
+foods, How many hamburgers does McDonald's sell a day?, 6.5 millions
+foods, True or false: Alcohol completely evaporates during cooking?, false
+foods, What is the only fruit with seeds on the outside?, strawberry

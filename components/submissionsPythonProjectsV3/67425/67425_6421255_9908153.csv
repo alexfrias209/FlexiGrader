@@ -1,0 +1,55 @@
+Make,model,type,cost,mpg
+Toyota,Corolla,Sedan,25000,33
+Subaru,BRZ,Coupe,28000,30
+Ford,Mustang,Coupe,38000,25
+Toyota,Camry,Sedan,25000,35
+Honda,Civic,Sedan,22000,32
+Ford,F-150,Truck,35000,20
+Chevrolet,Equinox,SUV,28000,28
+BMW,X5,SUV,55000,24
+Nissan,Altima,Sedan,23000,31
+Jeep,Wrangler,SUV,33000,18
+Audi,A4,Sedan,42000,27
+Tesla,Model 3,Sedan,49000,140
+Subaru,Outback,SUV,27000,29
+GMC,Sierra,Truck,39000,17
+Hyundai,Elantra,Sedan,19000,32
+Kia,Soul,Hatchback,18000,31
+Lexus,RX,SUV,52000,28
+Mercedes-Benz,E-Class,Sedan,56000,26
+Mitsubishi,Outlander,SUV,26000,27
+RAM,1500,Truck,42000,20
+Volkswagen,Jetta,Sedan,21000,30
+Ford,Explorer,SUV,32000,23
+Chevrolet,Silverado,Truck,40000,19
+Nissan,Rogue,SUV,26000,29
+Toyota,Highlander,SUV,39000,27
+Honda,CR-V,SUV,28000,32
+Mazda,CX-5,SUV,26000,28
+Volkswagen,Passat,Sedan,23000,29
+Ford,Fusion,Sedan,24000,31
+Chevrolet,Malibu,Sedan,25000,30
+Kia,Sorento,SUV,29000,26
+Jeep,Grand Cherokee,SUV,34000,25
+Hyundai,Santa Fe,SUV,32000,27
+Subaru,Forester,SUV,28000,30
+Hyundai,Kona,SUV,22000,33
+Toyota,Rav4,SUV,31000,28
+Honda,Pilot,SUV,36000,27
+Ford,Escape,SUV,28000,30
+Chevrolet,Traverse,SUV,35000,22
+Mazda,3,Sedan,22000,35
+Kia,Forte,Sedan,19000,32
+Nissan,Maxima,Sedan,36000,29
+Ford,Mustang,Coupe,30000,25
+Chevrolet,Camaro,Coupe,32000,23
+Dodge,Challenger,Coupe,35000,25
+BMW,4 Series,Coupe,44000,27
+Audi,S5,Coupe,54000,24
+Lexus,RC,Coupe,48000,28
+Mercedes-Benz,C-Class Coupe,Coupe,51000,26
+Toyota,Prius,Sedan,39000,65
+Bugatti,Veyron,Coupe,1600000,12
+Bugatti,Veyron,Coupe,1600000,12
+Bugatti,Veyron,Coupe,1600000,12
+Bugatti,Veyron,Coupe,1600000,12

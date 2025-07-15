@@ -1,0 +1,10 @@
+Exchange rate for 1 CHF
+EUR	1.05
+USD	1.11
+JPY	165.41
+GBP	0.91
+AUD	1.76
+CAD	1.51
+HKD	8.65
+MXN	20.01
+NZD	1.88

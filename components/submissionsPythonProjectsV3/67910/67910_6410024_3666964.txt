@@ -1,0 +1,6 @@
+
+        The Force value of ALUMINUM is 4.050000000000001.
+        The tensile strain of ALUMINUM is -1.0.
+        print(f'The shear strain of ALUMINUM is -1.0.
+        print(f'the shear modulus of ALUMINUM is -0.2700000000000001.
+        
